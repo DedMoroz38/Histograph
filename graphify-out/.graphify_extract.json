@@ -1,0 +1,685 @@
+{
+  "nodes": [
+    {
+      "id": "db_py",
+      "label": "db.py",
+      "file_type": "code",
+      "source_file": "db.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "histograph_db_init_db",
+      "label": "init_db()",
+      "file_type": "code",
+      "source_file": "db.py",
+      "source_location": "L70"
+    },
+    {
+      "id": "histograph_db_upsert_channel",
+      "label": "upsert_channel()",
+      "file_type": "code",
+      "source_file": "db.py",
+      "source_location": "L78"
+    },
+    {
+      "id": "histograph_db_upsert_videos",
+      "label": "upsert_videos()",
+      "file_type": "code",
+      "source_file": "db.py",
+      "source_location": "L93"
+    },
+    {
+      "id": "youtube_py",
+      "label": "youtube.py",
+      "file_type": "code",
+      "source_file": "youtube.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "histograph_youtube_build_client",
+      "label": "build_client()",
+      "file_type": "code",
+      "source_file": "youtube.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "histograph_youtube_resolve_channel",
+      "label": "resolve_channel()",
+      "file_type": "code",
+      "source_file": "youtube.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "histograph_youtube_get_uploads_playlist_id",
+      "label": "get_uploads_playlist_id()",
+      "file_type": "code",
+      "source_file": "youtube.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "histograph_youtube_fetch_all_videos",
+      "label": "fetch_all_videos()",
+      "file_type": "code",
+      "source_file": "youtube.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "histograph_youtube_fetch_video_details",
+      "label": "_fetch_video_details()",
+      "file_type": "code",
+      "source_file": "youtube.py",
+      "source_location": "L70"
+    },
+    {
+      "id": "histograph_youtube_rationale_12",
+      "label": "Resolve a @handle or raw channel ID to (channel_id, channel_name).",
+      "file_type": "rationale",
+      "source_file": "youtube.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "histograph_youtube_rationale_44",
+      "label": "Fetch all videos from an uploads playlist. Returns list of video dicts.",
+      "file_type": "rationale",
+      "source_file": "youtube.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "fetch_videos_py",
+      "label": "fetch_videos.py",
+      "file_type": "code",
+      "source_file": "fetch_videos.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "histograph_fetch_videos_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "fetch_videos.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "parse_videos_py",
+      "label": "parse_videos.py",
+      "file_type": "code",
+      "source_file": "parse_videos.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "histograph_parse_videos_build_client",
+      "label": "build_client()",
+      "file_type": "code",
+      "source_file": "parse_videos.py",
+      "source_location": "L69"
+    },
+    {
+      "id": "histograph_parse_videos_clamp_year",
+      "label": "_clamp_year()",
+      "file_type": "code",
+      "source_file": "parse_videos.py",
+      "source_location": "L76"
+    },
+    {
+      "id": "histograph_parse_videos_parse_one",
+      "label": "parse_one()",
+      "file_type": "code",
+      "source_file": "parse_videos.py",
+      "source_location": "L82"
+    },
+    {
+      "id": "histograph_parse_videos_save_result",
+      "label": "save_result()",
+      "file_type": "code",
+      "source_file": "parse_videos.py",
+      "source_location": "L116"
+    },
+    {
+      "id": "histograph_parse_videos_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "parse_videos.py",
+      "source_location": "L200"
+    },
+    {
+      "id": "histograph_parse_videos_rationale_1",
+      "label": "Semantic parser: classifies each video against 20th-century scope and extracts s",
+      "file_type": "rationale",
+      "source_file": "parse_videos.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "migrate_py",
+      "label": "migrate.py",
+      "file_type": "code",
+      "source_file": "migrate.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "histograph_migrate_column_exists",
+      "label": "_column_exists()",
+      "file_type": "code",
+      "source_file": "migrate.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "histograph_migrate_table_exists",
+      "label": "_table_exists()",
+      "file_type": "code",
+      "source_file": "migrate.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "histograph_migrate_migrate",
+      "label": "migrate()",
+      "file_type": "code",
+      "source_file": "migrate.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "histograph_migrate_rationale_1",
+      "label": "One-time migration from the flat schema (videos.channel_name TEXT) to the normal",
+      "file_type": "rationale",
+      "source_file": "migrate.py",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "db_py",
+      "target": "sqlite3",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "db.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "db_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "db.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "db_py",
+      "target": "histograph_db_init_db",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "db_py",
+      "target": "histograph_db_upsert_channel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "db_py",
+      "target": "histograph_db_upsert_videos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "googleapiclient_discovery",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "googleapiclient_errors",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "histograph_youtube_build_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "histograph_youtube_resolve_channel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "histograph_youtube_get_uploads_playlist_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "histograph_youtube_fetch_all_videos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "youtube_py",
+      "target": "histograph_youtube_fetch_video_details",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_youtube_fetch_all_videos",
+      "target": "histograph_youtube_fetch_video_details",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_youtube_rationale_12",
+      "target": "histograph_youtube_resolve_channel",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_youtube_rationale_44",
+      "target": "histograph_youtube_fetch_all_videos",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "youtube.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "fetch_videos_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "fetch_videos.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "fetch_videos_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "fetch_videos.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "fetch_videos_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "fetch_videos.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "fetch_videos_py",
+      "target": "db",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "fetch_videos.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "fetch_videos_py",
+      "target": "youtube",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "fetch_videos.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "fetch_videos_py",
+      "target": "histograph_fetch_videos_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fetch_videos.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "anthropic",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "db",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "histograph_parse_videos_build_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "histograph_parse_videos_clamp_year",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "histograph_parse_videos_parse_one",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "histograph_parse_videos_save_result",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "parse_videos_py",
+      "target": "histograph_parse_videos_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_parse_videos_save_result",
+      "target": "histograph_parse_videos_clamp_year",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_parse_videos_main",
+      "target": "histograph_parse_videos_build_client",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_parse_videos_main",
+      "target": "histograph_parse_videos_parse_one",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_parse_videos_main",
+      "target": "histograph_parse_videos_save_result",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_parse_videos_rationale_1",
+      "target": "parse_videos_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parse_videos.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_py",
+      "target": "shutil",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_py",
+      "target": "sqlite3",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_py",
+      "target": "histograph_migrate_column_exists",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_py",
+      "target": "histograph_migrate_table_exists",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_py",
+      "target": "histograph_migrate_migrate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_migrate_migrate",
+      "target": "histograph_migrate_table_exists",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_migrate_migrate",
+      "target": "histograph_migrate_column_exists",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_migrate_rationale_1",
+      "target": "migrate_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_parse_videos_build_client",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_db_init_db",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_youtube_resolve_channel",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_db_upsert_channel",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_youtube_get_uploads_playlist_id",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_youtube_fetch_all_videos",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_fetch_videos_main",
+      "target": "histograph_db_upsert_videos",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fetch_videos.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "histograph_parse_videos_main",
+      "target": "histograph_db_init_db",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "parse_videos.py",
+      "source_location": "L203",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

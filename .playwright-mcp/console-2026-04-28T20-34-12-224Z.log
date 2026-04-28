@@ -1,0 +1,509 @@
+[     881ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     940ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1090ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1156ms] [LOG] [Fast Refresh] done in 175ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   22332ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   23153ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   24379ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   24397ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28615ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28628ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28628ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28656ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28657ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28675ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28676ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   28697ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  299137ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  299363ms] [LOG] [Fast Refresh] done in 328ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  358015ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  358215ms] [LOG] [Fast Refresh] done in 16ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  379912ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  379917ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  426541ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  426613ms] [LOG] [Fast Refresh] done in 64ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  435703ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  435777ms] [LOG] [Fast Refresh] done in 45ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  439861ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  439938ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  439981ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  440081ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  440377ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  440478ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  440652ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  440755ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=wnywt:0
+[  440800ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=wnywt:0
+[  440820ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  440897ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0bruynb._.js:15305
+[  440939ms] Error: ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/shared/lib/session.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[  440943ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  440971ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  441011ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  441070ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  441208ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  441276ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  448681ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  448706ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  448734ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  448765ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0bruynb._.js:15305
+[  448777ms] Error: ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/shared/lib/session.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[  448775ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  448776ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  448818ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  448880ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  455982ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  456026ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  456043ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0bruynb._.js:15305
+[  456048ms] Error: ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/shared/lib/session.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[  456051ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  456055ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  456088ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  456167ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  460524ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  460557ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  460584ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  460607ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0bruynb._.js:15305
+[  460612ms] Error: ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/shared/lib/session.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[  460616ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  460619ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  460659ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import trace:
+  Server Component:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  460731ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  464131ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  464408ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import traces:
+  #1 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/actions/auth.ts
+
+  #2 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  464456ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  464475ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0bruynb._.js:15305
+[  464480ms] Error: ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+
+
+Import traces:
+  #1 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/actions/auth.ts
+
+  #2 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/shared/lib/session.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/egormaksimov/Documents/PROGRAMMING/histograph/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[  464490ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  464496ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import traces:
+  #1 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/actions/auth.ts
+
+  #2 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  464526ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import traces:
+  #1 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/actions/auth.ts
+
+  #2 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  464595ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  501360ms] [ERROR] ./src/shared/lib/session.ts:2:1
+Module not found: Can't resolve 'jose'
+  1 | import "server-only";
+> 2 | import { SignJWT, jwtVerify } from "jose";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cookies } from "next/headers";
+  4 |
+  5 | const secretKey = process.env.SESSION_SECRET;
+
+Import traces:
+  #1 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/actions/auth.ts
+
+  #2 [Server Component]:
+    ./src/shared/lib/session.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  501424ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  501671ms] [LOG] [Fast Refresh] done in 77ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  502022ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  502052ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  502183ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  502225ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 1429876ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3398368ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5193464ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 5193498ms] [ERROR] %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Updating border borderTop @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 5193704ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5193705ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 6723977ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 6724008ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 8183527ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 8184502ms] [LOG] [Fast Refresh] done in 322ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 8476257ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 8476910ms] [LOG] [Fast Refresh] done in 501ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
