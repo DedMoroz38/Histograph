@@ -29,7 +29,8 @@ COPY --from=builder /app/frontend/.next/standalone ./
 COPY --from=builder /app/frontend/.next/static     ./.next/static
 COPY --from=builder /app/frontend/public           ./public
 
-# Entrypoint
+# Schema + entrypoint
+COPY schema.sql /app/schema.sql
 COPY docker-entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
