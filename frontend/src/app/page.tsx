@@ -13,33 +13,32 @@ function deriveRow(videoId: string): number {
   return hash % 3;
 }
 
-function fetchVideos(): Video[] {
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `
-      SELECT
-        v.video_id, v.title, v.url, v.published_at,
-        v.thumbnail_url,
-        c.name AS channel, c.handle AS channel_handle, c.logo_url AS channel_logo_url,
-        vp.primary_year, vp.start_year, vp.end_year,
-        vp.main_topic, vp.event_name, vp.confidence,
-        GROUP_CONCAT(DISTINCT t.name)  AS topics,
-        GROUP_CONCAT(DISTINCT p.name)  AS persons
-      FROM videos v
-      JOIN channels c     ON v.channel_id  = c.id
-      JOIN video_parse vp ON v.video_id    = vp.video_id
-      LEFT JOIN video_topics  vt  ON v.video_id = vt.video_id
-      LEFT JOIN topics        t   ON vt.topic_id  = t.id
-      LEFT JOIN video_persons vpe ON v.video_id = vpe.video_id
-      LEFT JOIN persons       p   ON vpe.person_id = p.id
-      WHERE vp.parse_status = 'done'
-        AND vp.primary_year IS NOT NULL
-      GROUP BY v.video_id
-      ORDER BY vp.primary_year ASC
-      `
-    )
-    .all() as Record<string, unknown>[];
+async function fetchVideos(): Promise<Video[]> {
+  const { rows } = await getDb().query(`
+    SELECT
+      v.video_id, v.title, v.url, v.published_at,
+      v.thumbnail_url,
+      c.name AS channel, c.handle AS channel_handle, c.logo_url AS channel_logo_url,
+      vp.primary_year, vp.start_year, vp.end_year,
+      vp.main_topic, vp.event_name, vp.confidence,
+      STRING_AGG(DISTINCT t.name, ',')  AS topics,
+      STRING_AGG(DISTINCT p.name, ',')  AS persons
+    FROM videos v
+    JOIN channels c     ON v.channel_id  = c.id
+    JOIN video_parse vp ON v.video_id    = vp.video_id
+    LEFT JOIN video_topics  vt  ON v.video_id = vt.video_id
+    LEFT JOIN topics        t   ON vt.topic_id  = t.id
+    LEFT JOIN video_persons vpe ON v.video_id = vpe.video_id
+    LEFT JOIN persons       p   ON vpe.person_id = p.id
+    WHERE vp.parse_status = 'done'
+      AND vp.primary_year IS NOT NULL
+    GROUP BY
+      v.video_id, v.title, v.url, v.published_at, v.thumbnail_url,
+      c.name, c.handle, c.logo_url,
+      vp.primary_year, vp.start_year, vp.end_year,
+      vp.main_topic, vp.event_name, vp.confidence
+    ORDER BY vp.primary_year ASC
+  `);
 
   return rows.map((r) => {
     const year = r.primary_year as number;
@@ -71,11 +70,8 @@ function fetchVideos(): Video[] {
 }
 
 export default async function Home() {
-  const [videos, session] = await Promise.all([
-    Promise.resolve(fetchVideos()),
-    auth(),
-  ]);
-  const userEmail = session?.user?.email ?? null;          // Telegram has no email — don't fallback to name
+  const [videos, session] = await Promise.all([fetchVideos(), auth()]);
+  const userEmail = session?.user?.email ?? null;
   const userId    = session?.user?.id    ?? null;
   const userImage = session?.user?.image ?? null;
   const userName  = session?.user?.name  ?? null;

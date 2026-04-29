@@ -25,24 +25,27 @@ const SQL = `
     vp.main_topic,
     vp.event_name,
     vp.confidence,
-    GROUP_CONCAT(DISTINCT t.name)  AS topics,
-    GROUP_CONCAT(DISTINCT p.name)  AS persons
+    STRING_AGG(DISTINCT t.name, ',')  AS topics,
+    STRING_AGG(DISTINCT p.name, ',')  AS persons
   FROM videos v
-  JOIN channels c   ON v.channel_id  = c.id
-  JOIN video_parse vp ON v.video_id  = vp.video_id
-  LEFT JOIN video_topics  vt  ON v.video_id = vt.video_id
-  LEFT JOIN topics        t   ON vt.topic_id  = t.id
-  LEFT JOIN video_persons vpe ON v.video_id = vpe.video_id
+  JOIN channels c     ON v.channel_id   = c.id
+  JOIN video_parse vp ON v.video_id     = vp.video_id
+  LEFT JOIN video_topics  vt  ON v.video_id  = vt.video_id
+  LEFT JOIN topics        t   ON vt.topic_id = t.id
+  LEFT JOIN video_persons vpe ON v.video_id  = vpe.video_id
   LEFT JOIN persons       p   ON vpe.person_id = p.id
   WHERE vp.parse_status = 'done'
     AND vp.primary_year IS NOT NULL
-  GROUP BY v.video_id
+  GROUP BY
+    v.video_id, v.title, v.url, v.published_at, v.thumbnail_url,
+    c.name, c.handle, c.logo_url,
+    vp.primary_year, vp.start_year, vp.end_year,
+    vp.main_topic, vp.event_name, vp.confidence
   ORDER BY vp.primary_year ASC
 `;
 
-export function GET() {
-  const db = getDb();
-  const rows = db.prepare(SQL).all() as Record<string, unknown>[];
+export async function GET() {
+  const { rows } = await getDb().query(SQL);
 
   const videos: Video[] = rows.map((r) => {
     const year = r.primary_year as number;

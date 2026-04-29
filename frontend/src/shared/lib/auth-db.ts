@@ -1,56 +1,4 @@
-import Database from "better-sqlite3";
-import path from "path";
-
-let _authDb: Database.Database | null = null;
-
-function getAuthDb(): Database.Database {
-  if (!_authDb) {
-    const dbPath = process.env.DB_PATH ?? path.join(process.cwd(), "..", "videos.db");
-    _authDb = new Database(dbPath);
-    _authDb.pragma("journal_mode = WAL");
-    _authDb.pragma("foreign_keys = ON");
-    _ensureSchema(_authDb);
-  }
-  return _authDb;
-}
-
-function _ensureSchema(db: Database.Database): void {
-  const cols = (db.prepare("PRAGMA table_info(users)").all() as { name: string }[]).map(
-    (r) => r.name
-  );
-
-  if (!cols.includes("google_id")) {
-    // Recreate users table with OAuth columns (handles first-run before Python migration)
-    db.exec(`
-      CREATE TABLE IF NOT EXISTS users_tmp_oauth (
-        id             INTEGER PRIMARY KEY AUTOINCREMENT,
-        email          TEXT    UNIQUE,
-        password_hash  TEXT,
-        name           TEXT,
-        image          TEXT,
-        google_id      TEXT    UNIQUE,
-        telegram_id    TEXT    UNIQUE,
-        last_logged_in TEXT,
-        created_at     TEXT    NOT NULL DEFAULT (datetime('now'))
-      );
-      INSERT OR IGNORE INTO users_tmp_oauth (id, email, password_hash, created_at)
-        SELECT id, email, password_hash, created_at FROM users;
-      DROP TABLE users;
-      ALTER TABLE users_tmp_oauth RENAME TO users;
-    `);
-  } else if (!cols.includes("last_logged_in")) {
-    db.exec("ALTER TABLE users ADD COLUMN last_logged_in TEXT");
-  }
-
-  db.exec(`
-    CREATE TABLE IF NOT EXISTS user_watched (
-      user_id    INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-      video_id   TEXT    NOT NULL,
-      watched_at TEXT    NOT NULL DEFAULT (datetime('now')),
-      PRIMARY KEY (user_id, video_id)
-    )
-  `);
-}
+import { getPool } from "./pool";
 
 export interface UserRow {
   id: number;
@@ -60,145 +8,151 @@ export interface UserRow {
   image: string | null;
   google_id: string | null;
   telegram_id: string | null;
-  last_logged_in: string | null;
-  created_at: string;
+  last_logged_in: Date | null;
+  created_at: Date;
 }
 
-export function getUserByEmail(email: string): UserRow | null {
-  return (
-    (getAuthDb().prepare("SELECT * FROM users WHERE email = ?").get(email) as UserRow) ?? null
+export async function getUserByEmail(email: string): Promise<UserRow | null> {
+  const { rows } = await getPool().query<UserRow>(
+    "SELECT * FROM users WHERE email = $1",
+    [email]
+  );
+  return rows[0] ?? null;
+}
+
+export async function getUserById(id: number): Promise<UserRow | null> {
+  const { rows } = await getPool().query<UserRow>(
+    "SELECT * FROM users WHERE id = $1",
+    [id]
+  );
+  return rows[0] ?? null;
+}
+
+export async function getUserByGoogleId(googleId: string): Promise<UserRow | null> {
+  const { rows } = await getPool().query<UserRow>(
+    "SELECT * FROM users WHERE google_id = $1",
+    [googleId]
+  );
+  return rows[0] ?? null;
+}
+
+export async function getUserByTelegramId(telegramId: string): Promise<UserRow | null> {
+  const { rows } = await getPool().query<UserRow>(
+    "SELECT * FROM users WHERE telegram_id = $1",
+    [telegramId]
+  );
+  return rows[0] ?? null;
+}
+
+export async function touchLastLoggedIn(userId: number): Promise<void> {
+  await getPool().query(
+    "UPDATE users SET last_logged_in = NOW() WHERE id = $1",
+    [userId]
   );
 }
 
-export function getUserById(id: number): UserRow | null {
-  return (
-    (getAuthDb().prepare("SELECT * FROM users WHERE id = ?").get(id) as UserRow) ?? null
-  );
-}
-
-export function getUserByGoogleId(googleId: string): UserRow | null {
-  return (
-    (getAuthDb()
-      .prepare("SELECT * FROM users WHERE google_id = ?")
-      .get(googleId) as UserRow) ?? null
-  );
-}
-
-export function getUserByTelegramId(telegramId: string): UserRow | null {
-  return (
-    (getAuthDb()
-      .prepare("SELECT * FROM users WHERE telegram_id = ?")
-      .get(telegramId) as UserRow) ?? null
-  );
-}
-
-export function touchLastLoggedIn(userId: number): void {
-  getAuthDb()
-    .prepare("UPDATE users SET last_logged_in = datetime('now') WHERE id = ?")
-    .run(userId);
-}
-
-export function createUser(
+export async function createUser(
   email: string,
   passwordHash: string,
   name?: string
-): number {
-  const result = getAuthDb()
-    .prepare(
-      "INSERT INTO users (email, password_hash, name, last_logged_in) VALUES (?, ?, ?, datetime('now'))"
-    )
-    .run(email, passwordHash, name ?? null);
-  return result.lastInsertRowid as number;
+): Promise<number> {
+  const { rows } = await getPool().query<{ id: number }>(
+    "INSERT INTO users (email, password_hash, name, last_logged_in) VALUES ($1, $2, $3, NOW()) RETURNING id",
+    [email, passwordHash, name ?? null]
+  );
+  return rows[0].id;
 }
 
-export function upsertGoogleUser(
+export async function upsertGoogleUser(
   googleId: string,
   email: string | null,
   name: string,
   image: string
-): number {
-  const db = getAuthDb();
+): Promise<number> {
+  const pool = getPool();
 
   // Case 1: existing email+password account → merge Google onto it
   if (email) {
-    const byEmail = db
-      .prepare("SELECT id FROM users WHERE email = ?")
-      .get(email) as { id: number } | undefined;
-    if (byEmail) {
-      db.prepare(
-        "UPDATE users SET google_id = ?, name = ?, image = ?, last_logged_in = datetime('now') WHERE id = ?"
-      ).run(googleId, name, image, byEmail.id);
-      return byEmail.id;
+    const { rows: byEmail } = await pool.query<{ id: number }>(
+      "SELECT id FROM users WHERE email = $1",
+      [email]
+    );
+    if (byEmail.length > 0) {
+      await pool.query(
+        "UPDATE users SET google_id = $1, name = $2, image = $3, last_logged_in = NOW() WHERE id = $4",
+        [googleId, name, image, byEmail[0].id]
+      );
+      return byEmail[0].id;
     }
   }
 
   // Case 2: existing Google account (re-sign-in) → refresh name/image
-  const byGoogle = db
-    .prepare("SELECT id FROM users WHERE google_id = ?")
-    .get(googleId) as { id: number } | undefined;
-  if (byGoogle) {
-    db.prepare(
-      "UPDATE users SET name = ?, image = ?, last_logged_in = datetime('now') WHERE id = ?"
-    ).run(name, image, byGoogle.id);
-    return byGoogle.id;
+  const { rows: byGoogle } = await pool.query<{ id: number }>(
+    "SELECT id FROM users WHERE google_id = $1",
+    [googleId]
+  );
+  if (byGoogle.length > 0) {
+    await pool.query(
+      "UPDATE users SET name = $1, image = $2, last_logged_in = NOW() WHERE id = $3",
+      [name, image, byGoogle[0].id]
+    );
+    return byGoogle[0].id;
   }
 
   // Case 3: brand-new Google user
-  const r = db
-    .prepare(
-      "INSERT INTO users (google_id, email, name, image, last_logged_in) VALUES (?, ?, ?, ?, datetime('now'))"
-    )
-    .run(googleId, email, name, image);
-  return r.lastInsertRowid as number;
+  const { rows: inserted } = await pool.query<{ id: number }>(
+    "INSERT INTO users (google_id, email, name, image, last_logged_in) VALUES ($1, $2, $3, $4, NOW()) RETURNING id",
+    [googleId, email, name, image]
+  );
+  return inserted[0].id;
 }
 
-export function upsertTelegramUser(
+export async function upsertTelegramUser(
   telegramId: string,
   name: string,
   image?: string
-): number {
-  const db = getAuthDb();
-  db.prepare(
-    "INSERT OR IGNORE INTO users (telegram_id, name, image) VALUES (?, ?, ?)"
-  ).run(telegramId, name, image ?? null);
-  db.prepare(
-    "UPDATE users SET name = ?, image = COALESCE(?, image), last_logged_in = datetime('now') WHERE telegram_id = ?"
-  ).run(name, image ?? null, telegramId);
-  const row = db.prepare("SELECT id FROM users WHERE telegram_id = ?").get(telegramId) as {
-    id: number;
-  };
-  return row.id;
+): Promise<number> {
+  const { rows } = await getPool().query<{ id: number }>(
+    `INSERT INTO users (telegram_id, name, image, last_logged_in)
+     VALUES ($1, $2, $3, NOW())
+     ON CONFLICT (telegram_id) DO UPDATE SET
+       name           = EXCLUDED.name,
+       image          = COALESCE(EXCLUDED.image, users.image),
+       last_logged_in = NOW()
+     RETURNING id`,
+    [telegramId, name, image ?? null]
+  );
+  return rows[0].id;
 }
 
 // ── Watched videos ─────────────────────────────────────────────────────────
 
-export function getWatchedIds(userId: number): string[] {
-  const rows = getAuthDb()
-    .prepare("SELECT video_id FROM user_watched WHERE user_id = ?")
-    .all(userId) as { video_id: string }[];
+export async function getWatchedIds(userId: number): Promise<string[]> {
+  const { rows } = await getPool().query<{ video_id: string }>(
+    "SELECT video_id FROM user_watched WHERE user_id = $1",
+    [userId]
+  );
   return rows.map((r) => r.video_id);
 }
 
-export function addWatched(userId: number, videoId: string): void {
-  getAuthDb()
-    .prepare(
-      "INSERT OR IGNORE INTO user_watched (user_id, video_id) VALUES (?, ?)"
-    )
-    .run(userId, videoId);
-}
-
-export function removeWatched(userId: number, videoId: string): void {
-  getAuthDb()
-    .prepare("DELETE FROM user_watched WHERE user_id = ? AND video_id = ?")
-    .run(userId, videoId);
-}
-
-export function mergeWatched(userId: number, videoIds: string[]): void {
-  const insert = getAuthDb().prepare(
-    "INSERT OR IGNORE INTO user_watched (user_id, video_id) VALUES (?, ?)"
+export async function addWatched(userId: number, videoId: string): Promise<void> {
+  await getPool().query(
+    "INSERT INTO user_watched (user_id, video_id) VALUES ($1, $2) ON CONFLICT DO NOTHING",
+    [userId, videoId]
   );
-  const insertMany = getAuthDb().transaction((ids: string[]) => {
-    for (const id of ids) insert.run(userId, id);
-  });
-  insertMany(videoIds);
+}
+
+export async function removeWatched(userId: number, videoId: string): Promise<void> {
+  await getPool().query(
+    "DELETE FROM user_watched WHERE user_id = $1 AND video_id = $2",
+    [userId, videoId]
+  );
+}
+
+export async function mergeWatched(userId: number, videoIds: string[]): Promise<void> {
+  if (videoIds.length === 0) return;
+  await getPool().query(
+    "INSERT INTO user_watched (user_id, video_id) SELECT $1, UNNEST($2::text[]) ON CONFLICT DO NOTHING",
+    [userId, videoIds]
+  );
 }

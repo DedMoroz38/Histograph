@@ -18,7 +18,6 @@ from dotenv import load_dotenv
 
 from . import db
 
-DB_PATH = "videos.db"
 MODEL = "gpt-4o-mini"
 DESC_LIMIT = 600  # characters of description sent to the model
 
@@ -109,83 +108,89 @@ def parse_one(client: openai.OpenAI, title: str, description: str) -> dict | Non
 
 def save_result(conn, video_id: str, result: dict | None) -> str:
     if result is None:
-        conn.execute(
-            """
-            INSERT INTO video_parse (video_id, parse_status, parsed_at)
-            VALUES (?, 'failed', datetime('now'))
-            ON CONFLICT(video_id) DO UPDATE SET
-                parse_status = 'failed', parsed_at = datetime('now')
-            """,
-            (video_id,),
-        )
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                INSERT INTO video_parse (video_id, parse_status, parsed_at)
+                VALUES (%s, 'failed', NOW())
+                ON CONFLICT (video_id) DO UPDATE SET
+                    parse_status = 'failed', parsed_at = NOW()
+                """,
+                (video_id,),
+            )
         conn.commit()
         return "failed"
 
     if not result.get("in_scope"):
-        conn.execute(
-            """
-            INSERT INTO video_parse (video_id, parse_status, parsed_at)
-            VALUES (?, 'skipped', datetime('now'))
-            ON CONFLICT(video_id) DO UPDATE SET
-                parse_status = 'skipped', parsed_at = datetime('now')
-            """,
-            (video_id,),
-        )
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                INSERT INTO video_parse (video_id, parse_status, parsed_at)
+                VALUES (%s, 'skipped', NOW())
+                ON CONFLICT (video_id) DO UPDATE SET
+                    parse_status = 'skipped', parsed_at = NOW()
+                """,
+                (video_id,),
+            )
         conn.commit()
         return "skipped"
 
-    # Clamp years to valid 20th-century range
     start_year = _clamp_year(result.get("start_year"))
     end_year = _clamp_year(result.get("end_year"))
     primary_year = _clamp_year(result.get("primary_year"))
 
-    conn.execute(
-        """
-        INSERT INTO video_parse (
-            video_id, main_topic, event_name,
-            start_year, end_year, primary_year,
-            confidence, parse_status, parsed_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, 'done', datetime('now'))
-        ON CONFLICT(video_id) DO UPDATE SET
-            main_topic   = excluded.main_topic,
-            event_name   = excluded.event_name,
-            start_year   = excluded.start_year,
-            end_year     = excluded.end_year,
-            primary_year = excluded.primary_year,
-            confidence   = excluded.confidence,
-            parse_status = 'done',
-            parsed_at    = datetime('now')
-        """,
-        (
-            video_id,
-            result.get("main_topic"),
-            result.get("event_name"),
-            start_year,
-            end_year,
-            primary_year,
-            result.get("confidence"),
-        ),
-    )
-
-    for topic_name in result.get("topics") or []:
-        conn.execute("INSERT OR IGNORE INTO topics (name) VALUES (?)", (topic_name,))
-        (topic_id,) = conn.execute(
-            "SELECT id FROM topics WHERE name=?", (topic_name,)
-        ).fetchone()
-        conn.execute(
-            "INSERT OR IGNORE INTO video_topics (video_id, topic_id) VALUES (?, ?)",
-            (video_id, topic_id),
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            INSERT INTO video_parse (
+                video_id, main_topic, event_name,
+                start_year, end_year, primary_year,
+                confidence, parse_status, parsed_at
+            ) VALUES (%s, %s, %s, %s, %s, %s, %s, 'done', NOW())
+            ON CONFLICT (video_id) DO UPDATE SET
+                main_topic   = EXCLUDED.main_topic,
+                event_name   = EXCLUDED.event_name,
+                start_year   = EXCLUDED.start_year,
+                end_year     = EXCLUDED.end_year,
+                primary_year = EXCLUDED.primary_year,
+                confidence   = EXCLUDED.confidence,
+                parse_status = 'done',
+                parsed_at    = NOW()
+            """,
+            (
+                video_id,
+                result.get("main_topic"),
+                result.get("event_name"),
+                start_year,
+                end_year,
+                primary_year,
+                result.get("confidence"),
+            ),
         )
 
-    for person_name in result.get("persons") or []:
-        conn.execute("INSERT OR IGNORE INTO persons (name) VALUES (?)", (person_name,))
-        (person_id,) = conn.execute(
-            "SELECT id FROM persons WHERE name=?", (person_name,)
-        ).fetchone()
-        conn.execute(
-            "INSERT OR IGNORE INTO video_persons (video_id, person_id) VALUES (?, ?)",
-            (video_id, person_id),
-        )
+        for topic_name in result.get("topics") or []:
+            cur.execute(
+                "INSERT INTO topics (name) VALUES (%s) ON CONFLICT (name) DO NOTHING",
+                (topic_name,),
+            )
+            cur.execute("SELECT id FROM topics WHERE name = %s", (topic_name,))
+            (topic_id,) = cur.fetchone()
+            cur.execute(
+                "INSERT INTO video_topics (video_id, topic_id) VALUES (%s, %s) ON CONFLICT DO NOTHING",
+                (video_id, topic_id),
+            )
+
+        for person_name in result.get("persons") or []:
+            cur.execute(
+                "INSERT INTO persons (name) VALUES (%s) ON CONFLICT (name) DO NOTHING",
+                (person_name,),
+            )
+            cur.execute("SELECT id FROM persons WHERE name = %s", (person_name,))
+            (person_id,) = cur.fetchone()
+            cur.execute(
+                "INSERT INTO video_persons (video_id, person_id) VALUES (%s, %s) ON CONFLICT DO NOTHING",
+                (video_id, person_id),
+            )
 
     conn.commit()
     return "done"
@@ -194,17 +199,24 @@ def save_result(conn, video_id: str, result: dict | None) -> str:
 def main() -> None:
     load_dotenv()
     client = build_client()
-    conn = db.init_db(DB_PATH)
 
-    rows = conn.execute(
-        """
-        SELECT v.video_id, v.title, v.description
-        FROM videos v
-        LEFT JOIN video_parse vp ON v.video_id = vp.video_id
-        WHERE vp.video_id IS NULL OR vp.parse_status = 'pending'
-        ORDER BY v.published_at DESC
-        """
-    ).fetchall()
+    database_url = os.getenv("DATABASE_URL", "").strip()
+    if not database_url:
+        sys.exit("Error: DATABASE_URL is not set.")
+
+    conn = db.init_db(database_url)
+
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            SELECT v.video_id, v.title, v.description
+            FROM videos v
+            LEFT JOIN video_parse vp ON v.video_id = vp.video_id
+            WHERE vp.video_id IS NULL OR vp.parse_status = 'pending'
+            ORDER BY v.published_at DESC
+            """
+        )
+        rows = cur.fetchall()
 
     total = len(rows)
     if total == 0:

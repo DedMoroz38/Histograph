@@ -7,7 +7,7 @@ export async function GET() {
   const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ ids: [] });
   const userId = parseInt(session.user.id, 10);
-  return NextResponse.json({ ids: getWatchedIds(userId) });
+  return NextResponse.json({ ids: await getWatchedIds(userId) });
 }
 
 export async function POST(req: NextRequest) {
@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     action: "add" | "remove";
   };
   if (!videoId) return NextResponse.json({ error: "Missing videoId" }, { status: 400 });
-  if (action === "add") addWatched(userId, videoId);
-  else if (action === "remove") removeWatched(userId, videoId);
+  if (action === "add") await addWatched(userId, videoId);
+  else if (action === "remove") await removeWatched(userId, videoId);
   return NextResponse.json({ ok: true });
 }

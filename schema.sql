@@ -1,10 +1,5 @@
-import os
-from typing import Optional
+-- PostgreSQL schema — idempotent (safe to run multiple times)
 
-import psycopg2
-import psycopg2.extensions
-
-SCHEMA = """
 CREATE TABLE IF NOT EXISTS channels (
     id                 SERIAL      PRIMARY KEY,
     youtube_channel_id TEXT        UNIQUE NOT NULL,
@@ -78,61 +73,3 @@ CREATE TABLE IF NOT EXISTS user_watched (
     watched_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     PRIMARY KEY (user_id, video_id)
 );
-"""
-
-_UPSERT_VIDEO = """
-INSERT INTO videos (video_id, channel_id, title, description, published_at, url, thumbnail_url)
-VALUES (%(video_id)s, %(channel_id)s, %(title)s, %(description)s, %(published_at)s, %(url)s, %(thumbnail_url)s)
-ON CONFLICT (video_id) DO UPDATE SET
-    channel_id    = EXCLUDED.channel_id,
-    title         = EXCLUDED.title,
-    description   = EXCLUDED.description,
-    thumbnail_url = EXCLUDED.thumbnail_url,
-    fetched_at    = NOW()
-"""
-
-
-def init_db(database_url: str) -> psycopg2.extensions.connection:
-    conn = psycopg2.connect(database_url)
-    with conn.cursor() as cur:
-        cur.execute(SCHEMA)
-    conn.commit()
-    return conn
-
-
-def upsert_channel(
-    conn: psycopg2.extensions.connection,
-    youtube_channel_id: str,
-    name: str,
-    handle: Optional[str] = None,
-    logo_url: Optional[str] = None,
-) -> int:
-    with conn.cursor() as cur:
-        cur.execute(
-            """
-            INSERT INTO channels (youtube_channel_id, name, handle, logo_url)
-            VALUES (%s, %s, %s, %s)
-            ON CONFLICT (youtube_channel_id) DO UPDATE SET
-                name     = EXCLUDED.name,
-                handle   = EXCLUDED.handle,
-                logo_url = COALESCE(channels.logo_url, EXCLUDED.logo_url)
-            RETURNING id
-            """,
-            (youtube_channel_id, name, handle, logo_url),
-        )
-        row = cur.fetchone()
-    conn.commit()
-    return row[0]
-
-
-def upsert_videos(conn: psycopg2.extensions.connection, rows: list[dict]) -> tuple[int, int]:
-    with conn.cursor() as cur:
-        cur.execute("SELECT COUNT(*) FROM videos")
-        before = cur.fetchone()[0]
-        cur.executemany(_UPSERT_VIDEO, rows)
-        cur.execute("SELECT COUNT(*) FROM videos")
-        after = cur.fetchone()[0]
-    conn.commit()
-    inserted = after - before
-    updated = len(rows) - inserted
-    return inserted, updated

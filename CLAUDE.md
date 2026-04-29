@@ -30,17 +30,19 @@ cp .env.example .env
 Required `.env` variables:
 - `YOUTUBE_API_KEY` — YouTube Data API v3 key
 - `CHANNEL_HANDLES` — comma-separated `@handle` or raw channel IDs
-- `ANTHROPIC_API_KEY` — for `parse-videos`
+- `OPENAI_API_KEY` — for `parse-videos`
+- `DATABASE_URL` — PostgreSQL connection string (e.g. `postgresql://histograph:histograph@localhost:5432/histograph`)
 
 ## Running the pipeline
 
 ```bash
-fetch-videos     # Fetch all video metadata → videos.db
-parse-videos     # Classify fetched videos with Claude
-migrate-db       # One-time schema migration (flat → normalized); safe to re-run
+fetch-videos     # Fetch all video metadata → PostgreSQL
+parse-videos     # Classify fetched videos with OpenAI
 ```
 
-Each script can also be run directly (`python fetch_videos.py`, etc.).
+Each script can also be run directly (`python -m parser.fetch_videos`, etc.).
+
+Both scripts read `DATABASE_URL` from `.env` (or environment). Run `docker compose up postgres -d` first for a local DB.
 
 ## Architecture
 
@@ -50,9 +52,8 @@ All five modules are flat at the repo root with no subdirectory packages.
 |------|------|
 | `youtube.py` | YouTube Data API v3 wrapper — resolve channel handles, paginate playlist items, batch-fetch video details |
 | `fetch_videos.py` | Entry point: reads env, iterates channels, calls `youtube.py` then `db.py` |
-| `db.py` | SQLite schema definition + `upsert_channel` / `upsert_videos` helpers; WAL mode + FK enforcement |
-| `parse_videos.py` | Entry point: queries `pending` videos, calls Claude, writes to `video_parse` / `topics` / `persons` |
-| `migrate.py` | One-time migration from old flat schema (`videos.channel_name TEXT`) to normalized `channels` table |
+| `db.py` | PostgreSQL schema + `init_db` / `upsert_channel` / `upsert_videos` helpers (psycopg2) |
+| `parse_videos.py` | Entry point: queries `pending` videos, calls OpenAI, writes to `video_parse` / `topics` / `persons` |
 
 ### Data flow
 
@@ -63,16 +64,16 @@ All five modules are flat at the repo root with no subdirectory packages.
        ▼
  fetch_videos.py
    ├── youtube.py  →  resolve handle → uploads playlist → video IDs → video details
-   └── db.py       →  upsert channels + videos  →  videos.db
+   └── db.py       →  upsert channels + videos  →  PostgreSQL
                                                        │
                                                        ▼
                                                parse_videos.py
-                                                 ├── db.py    (read pending videos)
-                                                 ├── Claude API (classify + extract)
-                                                 └── db.py    (write video_parse, topics, persons)
+                                                 ├── db.py       (read pending videos)
+                                                 ├── OpenAI API  (classify + extract)
+                                                 └── db.py       (write video_parse, topics, persons)
 ```
 
-### Database schema (videos.db)
+### Database schema (PostgreSQL — see `schema.sql`)
 
 - `channels` — YouTube channel registry (youtube_channel_id, name, handle)
 - `videos` — raw metadata (title, description, published_at, url, fetched_at)
@@ -80,9 +81,17 @@ All five modules are flat at the repo root with no subdirectory packages.
 - `topics` / `video_topics` — normalized topic keywords extracted by Claude
 - `persons` / `video_persons` — normalized historical figures extracted by Claude
 
-### Claude integration details (`parse_videos.py`)
+### Parser integration details (`parse_videos.py`)
 
-- Uses `claude-opus-4-7` with `output_config.effort = "low"` and strict JSON schema output (`json_schema` format).
-- System prompt is marked `cache_control: ephemeral` so it is prompt-cached across the batch — only pay for it once per session.
+- Uses OpenAI `gpt-4o-mini` with strict JSON schema output (`json_schema` format).
 - `parse_status = 'failed'` is safe to retry; re-running `parse-videos` picks up any `pending` or failed rows.
 - Years are clamped to 1900–1999 by `_clamp_year()` before writing to the DB.
+
+### Local Docker setup
+
+```bash
+docker compose up postgres -d   # start DB (schema applied automatically on first boot)
+fetch-videos                     # populate videos table
+parse-videos                     # classify + extract metadata
+docker compose up frontend -d   # start Next.js frontend
+```

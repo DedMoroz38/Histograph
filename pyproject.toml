@@ -6,12 +6,15 @@ dependencies = [
     "google-api-python-client>=2.0",
     "python-dotenv>=1.0",
     "openai>=1.0",
+    "psycopg2-binary>=2.9",
 ]
 
 [project.scripts]
 fetch-videos = "parser.fetch_videos:main"
 parse-videos = "parser.parse_videos:main"
-migrate-db   = "parser.migrate:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["parser"]
 
 [build-system]
 requires = ["hatchling"]

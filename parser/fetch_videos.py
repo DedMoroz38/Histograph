@@ -6,24 +6,25 @@ from dotenv import load_dotenv
 from . import db, youtube as yt
 
 
-DB_PATH = "videos.db"
-
-
 def main() -> None:
     load_dotenv()
 
     api_key = os.getenv("YOUTUBE_API_KEY", "").strip()
     if not api_key:
-        sys.exit("Error: YOUTUBE_API_KEY is not set. Copy .env.example to .env and fill it in.")
+        sys.exit("Error: YOUTUBE_API_KEY is not set.")
 
     raw_handles = os.getenv("CHANNEL_HANDLES", "").strip()
     if not raw_handles:
         sys.exit("Error: CHANNEL_HANDLES is not set.")
 
+    database_url = os.getenv("DATABASE_URL", "").strip()
+    if not database_url:
+        sys.exit("Error: DATABASE_URL is not set.")
+
     handles = [h.strip() for h in raw_handles.split(",") if h.strip()]
 
     client = yt.build_client(api_key)
-    conn = db.init_db(DB_PATH)
+    conn = db.init_db(database_url)
 
     total_inserted = total_updated = 0
 
@@ -48,7 +49,7 @@ def main() -> None:
         total_updated += updated
 
     conn.close()
-    print(f"\nDone. Total: {total_inserted} new, {total_updated} updated → {DB_PATH}")
+    print(f"\nDone. Total: {total_inserted} new, {total_updated} updated")
 
 
 if __name__ == "__main__":

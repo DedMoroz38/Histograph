@@ -24,7 +24,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
         const email = (credentials.email as string).trim().toLowerCase();
-        const user = getUserByEmail(email);
+        const user = await getUserByEmail(email);
         if (!user || !user.password_hash) return null;
         const ok = await bcrypt.compare(credentials.password as string, user.password_hash);
         if (!ok) return null;
@@ -62,7 +62,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (!isTelegramAuthFresh(data.auth_date)) return null;
 
         const name = [data.first_name, data.last_name].filter(Boolean).join(" ");
-        const userId = upsertTelegramUser(data.id, name, data.photo_url || undefined);
+        const userId = await upsertTelegramUser(data.id, name, data.photo_url || undefined);
         return {
           id: String(userId),
           name,
@@ -81,16 +81,16 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const email = profile.email ?? null;
         const name = (profile.name as string | undefined) ?? "";
         const image = (profile.picture as string | undefined) ?? "";
-        upsertGoogleUser(googleId, email ?? null, name, image);
+        await upsertGoogleUser(googleId, email ?? null, name, image);
       }
       return true;
     },
 
-    jwt({ token, user, account }) {
+    async jwt({ token, user, account }) {
       if (user) {
         // Initial sign-in: resolve our internal DB id
         if (account?.provider === "google") {
-          const dbUser = getUserByGoogleId(account.providerAccountId);
+          const dbUser = await getUserByGoogleId(account.providerAccountId);
           token.userId = dbUser ? String(dbUser.id) : undefined;
         } else {
           // Credentials providers return our DB id directly from authorize()
@@ -102,7 +102,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         token.accessTokenExpires  = Date.now() + ACCESS_TOKEN_TTL;
         token.refreshTokenExpires = Date.now() + REFRESH_TOKEN_TTL;
         if (token.userId) {
-          touchLastLoggedIn(parseInt(token.userId as string, 10));
+          await touchLastLoggedIn(parseInt(token.userId as string, 10));
         }
         return token;
       }

@@ -10,51 +10,53 @@ function deriveRow(videoId: string): number {
   return hash % 3;
 }
 
-export function GET(request: NextRequest) {
-  const q = request.nextUrl.searchParams.get("q")?.toLowerCase().trim() ?? "";
+export async function GET(request: NextRequest) {
+  const q = request.nextUrl.searchParams.get("q")?.trim() ?? "";
 
   if (!q) return Response.json({ videos: [], events: [] });
 
-  // Search events
   const matchedEvents = EVENTS.filter((e) =>
-    e.label.toLowerCase().includes(q)
+    e.label.toLowerCase().includes(q.toLowerCase())
   ).slice(0, 4);
 
-  // Search videos from DB
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `
-      SELECT
-        v.video_id, v.title, v.url, v.published_at,
-        v.thumbnail_url,
-        c.name AS channel, c.handle AS channel_handle, c.logo_url AS channel_logo_url,
-        vp.primary_year, vp.start_year, vp.end_year,
-        vp.main_topic, vp.event_name, vp.confidence,
-        GROUP_CONCAT(DISTINCT t.name)  AS topics,
-        GROUP_CONCAT(DISTINCT p.name)  AS persons
-      FROM videos v
-      JOIN channels c     ON v.channel_id  = c.id
-      JOIN video_parse vp ON v.video_id    = vp.video_id
-      LEFT JOIN video_topics  vt  ON v.video_id = vt.video_id
-      LEFT JOIN topics        t   ON vt.topic_id  = t.id
-      LEFT JOIN video_persons vpe ON v.video_id = vpe.video_id
-      LEFT JOIN persons       p   ON vpe.person_id = p.id
-      WHERE vp.parse_status = 'done'
-        AND vp.primary_year IS NOT NULL
-        AND (
-          LOWER(v.title)       LIKE '%' || ? || '%'
-          OR LOWER(c.name)     LIKE '%' || ? || '%'
-          OR CAST(vp.primary_year AS TEXT) LIKE '%' || ? || '%'
-          OR LOWER(vp.main_topic)  LIKE '%' || ? || '%'
-          OR LOWER(vp.event_name)  LIKE '%' || ? || '%'
-        )
-      GROUP BY v.video_id
-      ORDER BY vp.primary_year ASC
-      LIMIT 6
+  const likeParam = `%${q}%`;
+
+  const { rows } = await getDb().query(
     `
-    )
-    .all(q, q, q, q, q) as Record<string, unknown>[];
+    SELECT
+      v.video_id, v.title, v.url, v.published_at,
+      v.thumbnail_url,
+      c.name AS channel, c.handle AS channel_handle, c.logo_url AS channel_logo_url,
+      vp.primary_year, vp.start_year, vp.end_year,
+      vp.main_topic, vp.event_name, vp.confidence,
+      STRING_AGG(DISTINCT t.name, ',')  AS topics,
+      STRING_AGG(DISTINCT p.name, ',')  AS persons
+    FROM videos v
+    JOIN channels c     ON v.channel_id  = c.id
+    JOIN video_parse vp ON v.video_id    = vp.video_id
+    LEFT JOIN video_topics  vt  ON v.video_id = vt.video_id
+    LEFT JOIN topics        t   ON vt.topic_id  = t.id
+    LEFT JOIN video_persons vpe ON v.video_id = vpe.video_id
+    LEFT JOIN persons       p   ON vpe.person_id = p.id
+    WHERE vp.parse_status = 'done'
+      AND vp.primary_year IS NOT NULL
+      AND (
+        v.title          ILIKE $1
+        OR c.name        ILIKE $1
+        OR CAST(vp.primary_year AS TEXT) ILIKE $1
+        OR vp.main_topic ILIKE $1
+        OR vp.event_name ILIKE $1
+      )
+    GROUP BY
+      v.video_id, v.title, v.url, v.published_at, v.thumbnail_url,
+      c.name, c.handle, c.logo_url,
+      vp.primary_year, vp.start_year, vp.end_year,
+      vp.main_topic, vp.event_name, vp.confidence
+    ORDER BY vp.primary_year ASC
+    LIMIT 6
+    `,
+    [likeParam]
+  );
 
   const videos: Video[] = rows.map((r) => {
     const year = r.primary_year as number;

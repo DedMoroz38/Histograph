@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   const userId = parseInt(session.user.id, 10);
   const { ids } = (await req.json()) as { ids: string[] };
   if (Array.isArray(ids) && ids.length > 0) {
-    mergeWatched(userId, ids);
+    await mergeWatched(userId, ids);
   }
   return NextResponse.json({ merged: ids?.length ?? 0 });
 }
