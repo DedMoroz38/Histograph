@@ -11,6 +11,8 @@ RUN npm ci
 
 # Copy source and build
 COPY frontend/ ./
+ARG NEXT_PUBLIC_TELEGRAM_BOT_USERNAME
+ENV NEXT_PUBLIC_TELEGRAM_BOT_USERNAME=$NEXT_PUBLIC_TELEGRAM_BOT_USERNAME
 RUN npm run build
 
 # ─────────────────────────────────────────────────────────────────────────────

@@ -17,7 +17,10 @@ services:
       retries: 10
 
   frontend:
-    build: .
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_TELEGRAM_BOT_USERNAME: HistographBot
     environment:
       DATABASE_URL: postgresql://histograph:histograph@postgres:5432/histograph
       NODE_ENV: production
