@@ -9,9 +9,9 @@ dependencies = [
 ]
 
 [project.scripts]
-fetch-videos = "fetch_videos:main"
-parse-videos = "parse_videos:main"
-migrate-db   = "migrate:main"
+fetch-videos = "parser.fetch_videos:main"
+parse-videos = "parser.parse_videos:main"
+migrate-db   = "parser.migrate:main"
 
 [build-system]
 requires = ["hatchling"]

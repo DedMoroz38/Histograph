@@ -16,7 +16,7 @@ import sys
 import openai
 from dotenv import load_dotenv
 
-import db
+from . import db
 
 DB_PATH = "videos.db"
 MODEL = "gpt-4o-mini"

@@ -3,8 +3,7 @@ import sys
 
 from dotenv import load_dotenv
 
-import db
-import youtube as yt
+from . import db, youtube as yt
 
 
 DB_PATH = "videos.db"
