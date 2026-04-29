@@ -168,6 +168,81 @@ def add_users_table() -> None:
         conn.close()
 
 
+def add_oauth_columns() -> None:
+    """Extend users table with OAuth columns and relax NOT NULL constraints. Safe to re-run."""
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        if _column_exists(conn, "users", "google_id"):
+            print("OAuth columns already present — skipping.")
+            conn.close()
+            return
+
+        conn.execute("PRAGMA foreign_keys = OFF")
+        conn.execute("""
+            CREATE TABLE users_new (
+                id             INTEGER PRIMARY KEY AUTOINCREMENT,
+                email          TEXT    UNIQUE,
+                password_hash  TEXT,
+                name           TEXT,
+                image          TEXT,
+                google_id      TEXT    UNIQUE,
+                telegram_id    TEXT    UNIQUE,
+                last_logged_in TEXT,
+                created_at     TEXT    NOT NULL DEFAULT (datetime('now'))
+            )
+        """)
+        conn.execute("""
+            INSERT INTO users_new (id, email, password_hash, created_at)
+            SELECT id, email, password_hash, created_at FROM users
+        """)
+        conn.execute("DROP TABLE users")
+        conn.execute("ALTER TABLE users_new RENAME TO users")
+        conn.execute("PRAGMA foreign_keys = ON")
+        conn.commit()
+        print("OAuth columns added to users table")
+    except Exception as exc:
+        conn.rollback()
+        print(f"add_oauth_columns failed: {exc}")
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def add_watched_table() -> None:
+    """Add user_watched table for persisting watched videos. Safe to re-run."""
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS user_watched (
+                user_id    INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                video_id   TEXT    NOT NULL,
+                watched_at TEXT    NOT NULL DEFAULT (datetime('now')),
+                PRIMARY KEY (user_id, video_id)
+            )
+        """)
+        conn.commit()
+        print("user_watched table ready")
+    finally:
+        conn.close()
+
+
+def add_last_logged_in() -> None:
+    """Add last_logged_in column to users table. Safe to re-run."""
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        if _column_exists(conn, "users", "last_logged_in"):
+            print("last_logged_in column already present — skipping.")
+            return
+        conn.execute("ALTER TABLE users ADD COLUMN last_logged_in TEXT")
+        conn.commit()
+        print("last_logged_in column added to users table")
+    finally:
+        conn.close()
+
+
 if __name__ == "__main__":
     migrate()
     add_users_table()
+    add_oauth_columns()
+    add_last_logged_in()
+    add_watched_table()

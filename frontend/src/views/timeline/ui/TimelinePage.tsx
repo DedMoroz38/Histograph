@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { PAL } from "@/shared/config/palette";
 import { EVENTS } from "@/entities/event/model/events";
 import { xOf, PERIODS } from "@/shared/config/timeline";
@@ -21,9 +21,12 @@ import type { SortMode } from "@/features/sort/ui/SortBar";
 interface Props {
   initialVideos: Video[];
   initialUserEmail: string | null;
+  initialUserId: string | null;
+  initialUserImage: string | null;
+  initialUserName: string | null;
 }
 
-export function TimelinePage({ initialVideos, initialUserEmail }: Props) {
+export function TimelinePage({ initialVideos, initialUserEmail, initialUserId, initialUserImage, initialUserName }: Props) {
   const [colorTheme, setColorTheme] = useState<"light" | "dark">("light");
   const [density, setDensity] = useState<"comfortable" | "compact">("comfortable");
   const [showPeriodBands, setShowPeriodBands] = useState(true);
@@ -35,11 +38,48 @@ export function TimelinePage({ initialVideos, initialUserEmail }: Props) {
   const [watched, setWatched] = useState<Set<string>>(new Set());
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(initialUserEmail);
+  const [userId, setUserId] = useState<string | null>(initialUserId);
+  const [userImage, setUserImage] = useState<string | null>(initialUserImage);
+  const [userName, setUserName] = useState<string | null>(initialUserName);
   const [showLoginModal, setShowLoginModal] = useState(false);
 
   const canvasRef = useRef<HTMLDivElement>(null);
   const stripRef = useRef<HTMLDivElement>(null);
   const syncing = useRef(false);
+
+  // Sync watched state with DB (logged-in) or localStorage (guest).
+  // On userId change (login/logout), merge localStorage → DB then re-fetch.
+  useEffect(() => {
+    if (userId) {
+      const raw = localStorage.getItem("hg_watched");
+      const localIds: string[] = raw ? (() => { try { return JSON.parse(raw); } catch { return []; } })() : [];
+
+      const loadFromDb = () =>
+        fetch("/api/watched")
+          .then((r) => r.json())
+          .then(({ ids }: { ids: string[] }) => setWatched(new Set(ids)))
+          .catch(() => {});
+
+      if (localIds.length > 0) {
+        fetch("/api/watched/merge", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ids: localIds }),
+        })
+          .then(() => { localStorage.removeItem("hg_watched"); return loadFromDb(); })
+          .catch(() => { loadFromDb(); });
+      } else {
+        loadFromDb();
+      }
+    } else {
+      const raw = localStorage.getItem("hg_watched");
+      if (raw) {
+        try { setWatched(new Set(JSON.parse(raw))); } catch { /* ignore */ }
+      } else {
+        setWatched(new Set());
+      }
+    }
+  }, [userId]);
 
   const pal = PAL[colorTheme];
   const dark = colorTheme === "dark";
@@ -63,7 +103,21 @@ export function TimelinePage({ initialVideos, initialUserEmail }: Props) {
   const toggleWatch = (id: string) => {
     setWatched((prev) => {
       const n = new Set(prev);
-      n.has(id) ? n.delete(id) : n.add(id);
+      const removing = n.has(id);
+      removing ? n.delete(id) : n.add(id);
+      const action = removing ? "remove" : "add";
+
+      if (userId) {
+        fetch("/api/watched", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ videoId: id, action }),
+        }).catch(() => {});
+      } else {
+        try {
+          localStorage.setItem("hg_watched", JSON.stringify([...n]));
+        } catch { /* storage full or unavailable */ }
+      }
       return n;
     });
   };
@@ -117,7 +171,9 @@ export function TimelinePage({ initialVideos, initialUserEmail }: Props) {
         setActiveTheme={setActiveTheme}
         watched={watched}
         totalVideos={initialVideos.length}
-        loggedIn={!!userEmail}
+        loggedIn={!!userId}
+        userImage={userImage}
+        userName={userName}
         onLogin={() => setShowLoginModal(true)}
       />
 
@@ -256,7 +312,12 @@ export function TimelinePage({ initialVideos, initialUserEmail }: Props) {
           dark={dark}
           userEmail={userEmail}
           onClose={() => setShowLoginModal(false)}
-          onAuthChange={setUserEmail}
+          onAuthChange={(email, uid, image, name) => {
+            setUserEmail(email);
+            setUserId(uid ?? null);
+            setUserImage(image ?? null);
+            setUserName(name ?? null);
+          }}
         />
       )}
 

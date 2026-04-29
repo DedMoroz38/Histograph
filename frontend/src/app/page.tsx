@@ -1,5 +1,5 @@
 import { getDb } from "@/shared/lib/db";
-import { getSession } from "@/shared/lib/session";
+import { auth } from "@/auth";
 import { deriveEvents } from "@/entities/event/model/events";
 import { deriveTheme } from "@/shared/config/themes";
 import type { Video } from "@/entities/video/model/types";
@@ -71,7 +71,19 @@ function fetchVideos(): Video[] {
 export default async function Home() {
   const [videos, session] = await Promise.all([
     Promise.resolve(fetchVideos()),
-    getSession(),
+    auth(),
   ]);
-  return <TimelinePage initialVideos={videos} initialUserEmail={session?.email ?? null} />;
+  const userEmail = session?.user?.email ?? null;          // Telegram has no email — don't fallback to name
+  const userId    = session?.user?.id    ?? null;
+  const userImage = session?.user?.image ?? null;
+  const userName  = session?.user?.name  ?? null;
+  return (
+    <TimelinePage
+      initialVideos={videos}
+      initialUserEmail={userEmail}
+      initialUserId={userId}
+      initialUserImage={userImage}
+      initialUserName={userName}
+    />
+  );
 }

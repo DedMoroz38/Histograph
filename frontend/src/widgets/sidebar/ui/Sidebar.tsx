@@ -12,6 +12,8 @@ interface Props {
   watched: Set<string>;
   totalVideos: number;
   loggedIn: boolean;
+  userImage: string | null;
+  userName: string | null;
   onLogin: () => void;
 }
 
@@ -23,6 +25,8 @@ export function Sidebar({
   watched,
   totalVideos,
   loggedIn,
+  userImage,
+  userName,
   onLogin,
 }: Props) {
   const pct = totalVideos > 0 ? watched.size / totalVideos : 0;
@@ -189,9 +193,22 @@ export function Sidebar({
           fontSize: 16,
           color: loggedIn ? "#2d7d59" : pal.textDim,
           transition: "all 0.15s",
+          padding: 0,
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        {loggedIn ? "●" : "○"}
+        {loggedIn && userImage ? (
+          <img
+            src={userImage}
+            alt={userName ?? ""}
+            style={{ width: 38, height: 38, objectFit: "cover" }}
+          />
+        ) : (
+          loggedIn ? "●" : "○"
+        )}
       </button>
     </div>
   );

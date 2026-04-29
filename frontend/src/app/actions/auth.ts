@@ -1,12 +1,15 @@
 "use server";
 
 import bcrypt from "bcryptjs";
+import { AuthError } from "next-auth";
+import { signIn as nextAuthSignIn, signOut as nextAuthSignOut } from "@/auth";
 import { getUserByEmail, createUser } from "@/shared/lib/auth-db";
-import { createSession, deleteSession } from "@/shared/lib/session";
 
 export interface AuthState {
   error?: string;
   success?: boolean;
+  email?: string;
+  userId?: string;
 }
 
 export async function signUp(
@@ -17,15 +20,22 @@ export async function signUp(
   const password = formData.get("password") as string | null;
 
   if (!email || !password) return { error: "Заполните все поля" };
-  if (password.length < 6) return { error: "Минимум 6 символов" };
+  if (password.length < 8) return { error: "Минимум 8 символов" };
 
   const existing = getUserByEmail(email);
   if (existing) return { error: "Email уже зарегистрирован" };
 
   const hash = await bcrypt.hash(password, 10);
-  const userId = createUser(email, hash);
-  await createSession({ userId, email });
-  return { success: true };
+  createUser(email, hash);
+
+  try {
+    await nextAuthSignIn("credentials", { email, password, redirect: false });
+    const user = getUserByEmail(email);
+    return { success: true, email, userId: user ? String(user.id) : undefined };
+  } catch (err) {
+    if (err instanceof AuthError) return { error: "Не удалось войти после регистрации" };
+    throw err;
+  }
 }
 
 export async function signIn(
@@ -37,16 +47,16 @@ export async function signIn(
 
   if (!email || !password) return { error: "Заполните все поля" };
 
-  const user = getUserByEmail(email);
-  if (!user) return { error: "Неверный email или пароль" };
-
-  const ok = await bcrypt.compare(password, user.password_hash);
-  if (!ok) return { error: "Неверный email или пароль" };
-
-  await createSession({ userId: user.id, email: user.email });
-  return { success: true };
+  try {
+    await nextAuthSignIn("credentials", { email, password, redirect: false });
+    const user = getUserByEmail(email);
+    return { success: true, email, userId: user ? String(user.id) : undefined };
+  } catch (err) {
+    if (err instanceof AuthError) return { error: "Неверный email или пароль" };
+    throw err;
+  }
 }
 
 export async function signOut(): Promise<void> {
-  await deleteSession();
+  await nextAuthSignOut({ redirect: false });
 }
