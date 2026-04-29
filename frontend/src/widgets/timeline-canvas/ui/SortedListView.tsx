@@ -1,6 +1,6 @@
 "use client";
 
-import { THEME_COLOR, THEME_LABEL } from "@/shared/config/themes";
+import { THEME_COLOR, THEME_LABEL, CHANNEL_HUE } from "@/shared/config/themes";
 import { EVENTS } from "@/entities/event/model/events";
 import type { Palette } from "@/shared/config/palette";
 import type { Video } from "@/entities/video/model/types";
@@ -134,6 +134,31 @@ export function SortedListView({
                 >
                   {v.year}
                 </div>
+                {/* Video thumbnail */}
+                {v.thumbnailUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={v.thumbnailUrl}
+                    alt=""
+                    style={{
+                      width: 64,
+                      height: 36,
+                      objectFit: "cover",
+                      borderRadius: 2,
+                      flexShrink: 0,
+                    }}
+                  />
+                ) : (
+                  <div
+                    style={{
+                      width: 64,
+                      height: 36,
+                      borderRadius: 2,
+                      flexShrink: 0,
+                      background: `oklch(0.86 0.06 ${CHANNEL_HUE[v.channel] ?? 180})`,
+                    }}
+                  />
+                )}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div
                     style={{
@@ -149,7 +174,32 @@ export function SortedListView({
                     {isW && <span style={{ color: "#2d7d59", marginRight: 5 }}>✓</span>}
                     {v.title}
                   </div>
-                  <div style={{ fontSize: 10.5, color: pal.textDim, marginTop: 2 }}>
+                  <div style={{ fontSize: 10.5, color: pal.textDim, marginTop: 2, display: "flex", alignItems: "center", gap: 4 }}>
+                    {v.channelLogoUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={v.channelLogoUrl}
+                        alt=""
+                        referrerPolicy="no-referrer"
+                        style={{
+                          width: 14,
+                          height: 14,
+                          borderRadius: "50%",
+                          objectFit: "cover",
+                          flexShrink: 0,
+                        }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          width: 14,
+                          height: 14,
+                          borderRadius: "50%",
+                          background: `oklch(0.72 0.08 ${CHANNEL_HUE[v.channel] ?? 180})`,
+                          flexShrink: 0,
+                        }}
+                      />
+                    )}
                     {v.channel}{v.duration ? ` · ${v.duration}` : ""}
                   </div>
                 </div>

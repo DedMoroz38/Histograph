@@ -20,4 +20,6 @@ export interface Video {
   theme: Theme;        // derived from mainTopic text
   row: number;         // 0 | 1 | 2, derived from video_id hash
   duration: string | null;
+  thumbnailUrl: string | null;
+  channelLogoUrl: string | null;
 }

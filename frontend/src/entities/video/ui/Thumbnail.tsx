@@ -4,11 +4,12 @@ import { CHANNEL_HUE } from "@/shared/config/themes";
 
 interface Props {
   channel: string;
+  thumbnailUrl: string | null;
   height: number;
   duration: string | null;
 }
 
-export function Thumbnail({ channel, height, duration }: Props) {
+export function Thumbnail({ channel, thumbnailUrl, height, duration }: Props) {
   const hue = CHANNEL_HUE[channel] ?? 180;
   return (
     <div
@@ -20,7 +21,7 @@ export function Thumbnail({ channel, height, duration }: Props) {
         background: `oklch(0.86 0.06 ${hue})`,
       }}
     >
-      {/* Diagonal stripe */}
+      {/* Diagonal stripe fallback (visible only when image absent/loading) */}
       <div
         style={{
           position: "absolute",
@@ -29,6 +30,21 @@ export function Thumbnail({ channel, height, duration }: Props) {
           opacity: 0.45,
         }}
       />
+      {/* Real thumbnail — covers the fallback once loaded */}
+      {thumbnailUrl && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={thumbnailUrl}
+          alt=""
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      )}
       {/* Gradient overlay */}
       <div
         style={{
@@ -37,20 +53,6 @@ export function Thumbnail({ channel, height, duration }: Props) {
           background: `linear-gradient(to bottom, transparent 40%, oklch(0.50 0.08 ${hue}) 100%)`,
         }}
       />
-      <span
-        style={{
-          position: "absolute",
-          bottom: 6,
-          left: 8,
-          fontSize: 9,
-          fontWeight: 600,
-          color: "rgba(255,255,255,0.9)",
-          letterSpacing: "0.07em",
-          textTransform: "uppercase",
-        }}
-      >
-        {channel}
-      </span>
       {duration && (
         <span
           style={{
@@ -63,6 +65,7 @@ export function Thumbnail({ channel, height, duration }: Props) {
             fontWeight: 500,
             padding: "1px 5px",
             borderRadius: 2,
+            zIndex: 1,
           }}
         >
           {duration}

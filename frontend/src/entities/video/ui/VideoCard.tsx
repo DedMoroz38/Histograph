@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Thumbnail } from "./Thumbnail";
-import { THEME_COLOR, THEME_LABEL } from "@/shared/config/themes";
+import { THEME_COLOR, THEME_LABEL, CHANNEL_HUE } from "@/shared/config/themes";
 import { CW } from "@/shared/config/timeline";
 import type { Palette } from "@/shared/config/palette";
 import type { Video } from "../model/types";
@@ -93,6 +93,7 @@ export function VideoCard({
       <div style={{ overflow: "hidden", borderRadius: "2px 2px 0 0" }}>
         <Thumbnail
           channel={video.channel}
+          thumbnailUrl={video.thumbnailUrl}
           height={thumbHeight}
           duration={video.duration}
         />
@@ -107,19 +108,49 @@ export function VideoCard({
           justifyContent: "space-between",
         }}
       >
-        <div
-          style={{
-            fontSize: 11.5,
-            fontWeight: 500,
-            lineHeight: 1.35,
-            color: pal.text,
-            overflow: "hidden",
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-          }}
-        >
-          {video.title}
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
+          {/* Channel logo circle — like YouTube */}
+          {video.channelLogoUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={video.channelLogoUrl}
+              alt=""
+              referrerPolicy="no-referrer"
+              style={{
+                width: 18,
+                height: 18,
+                borderRadius: "50%",
+                objectFit: "cover",
+                flexShrink: 0,
+                marginTop: 1,
+              }}
+            />
+          ) : (
+            <div
+              style={{
+                width: 18,
+                height: 18,
+                borderRadius: "50%",
+                background: `oklch(0.72 0.08 ${CHANNEL_HUE[video.channel] ?? 180})`,
+                flexShrink: 0,
+                marginTop: 1,
+              }}
+            />
+          )}
+          <div
+            style={{
+              fontSize: 11.5,
+              fontWeight: 500,
+              lineHeight: 1.35,
+              color: pal.text,
+              overflow: "hidden",
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+            }}
+          >
+            {video.title}
+          </div>
         </div>
         <div
           style={{

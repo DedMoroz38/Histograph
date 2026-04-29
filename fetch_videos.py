@@ -31,14 +31,14 @@ def main() -> None:
     for handle in handles:
         print(f"\nProcessing channel: {handle}")
         try:
-            youtube_channel_id, channel_name = yt.resolve_channel(client, handle)
+            youtube_channel_id, channel_name, logo_url = yt.resolve_channel(client, handle)
         except ValueError as e:
             print(f"  Skipping — {e}")
             continue
 
         print(f"  Resolved: {channel_name!r} ({youtube_channel_id})")
 
-        channel_db_id = db.upsert_channel(conn, youtube_channel_id, channel_name, handle)
+        channel_db_id = db.upsert_channel(conn, youtube_channel_id, channel_name, handle, logo_url)
         uploads_id = yt.get_uploads_playlist_id(client, youtube_channel_id)
         videos = yt.fetch_all_videos(client, uploads_id, channel_db_id)
         print(f"  Fetched {len(videos)} videos")

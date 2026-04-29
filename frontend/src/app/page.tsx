@@ -18,7 +18,8 @@ function fetchVideos(): Video[] {
       `
       SELECT
         v.video_id, v.title, v.url, v.published_at,
-        c.name AS channel, c.handle AS channel_handle,
+        v.thumbnail_url,
+        c.name AS channel, c.handle AS channel_handle, c.logo_url AS channel_logo_url,
         vp.primary_year, vp.start_year, vp.end_year,
         vp.main_topic, vp.event_name, vp.confidence,
         GROUP_CONCAT(DISTINCT t.name)  AS topics,
@@ -61,6 +62,8 @@ function fetchVideos(): Video[] {
       theme: deriveTheme(mainTopic, eventName),
       row: deriveRow(r.video_id as string),
       duration: null,
+      thumbnailUrl: (r.thumbnail_url as string | null) ?? null,
+      channelLogoUrl: (r.channel_logo_url as string | null) ?? null,
     };
   });
 }

@@ -15,8 +15,10 @@ const SQL = `
     v.title,
     v.url,
     v.published_at,
+    v.thumbnail_url,
     c.name        AS channel,
     c.handle      AS channel_handle,
+    c.logo_url    AS channel_logo_url,
     vp.primary_year,
     vp.start_year,
     vp.end_year,
@@ -66,6 +68,8 @@ export function GET() {
       theme: deriveTheme(mainTopic, eventName),
       row: deriveRow(r.video_id as string),
       duration: null,
+      thumbnailUrl: (r.thumbnail_url as string | null) ?? null,
+      channelLogoUrl: (r.channel_logo_url as string | null) ?? null,
     };
   });
 

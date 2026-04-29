@@ -3,13 +3,23 @@ from googleapiclient.errors import HttpError
 
 YOUTUBE_URL = "https://www.youtube.com/watch?v="
 
+_CHANNEL_THUMB_PREFERENCE = ["high", "medium", "default"]
+_VIDEO_THUMB_PREFERENCE = ["maxres", "standard", "high", "medium", "default"]
+
 
 def build_client(api_key: str):
     return build("youtube", "v3", developerKey=api_key)
 
 
-def resolve_channel(youtube, handle: str) -> tuple[str, str]:
-    """Resolve a @handle or raw channel ID to (channel_id, channel_name)."""
+def _best_thumbnail(thumbnails: dict, preference: list[str]) -> str | None:
+    for key in preference:
+        if key in thumbnails:
+            return thumbnails[key].get("url")
+    return None
+
+
+def resolve_channel(youtube, handle: str) -> tuple[str, str, str | None]:
+    """Resolve a @handle or raw channel ID to (channel_id, channel_name, logo_url)."""
     handle = handle.strip()
 
     if handle.startswith("@"):
@@ -29,7 +39,10 @@ def resolve_channel(youtube, handle: str) -> tuple[str, str]:
         raise ValueError(f"Channel not found: {handle!r}")
 
     item = items[0]
-    return item["id"], item["snippet"]["title"]
+    logo_url = _best_thumbnail(
+        item["snippet"].get("thumbnails", {}), _CHANNEL_THUMB_PREFERENCE
+    )
+    return item["id"], item["snippet"]["title"], logo_url
 
 
 def get_uploads_playlist_id(youtube, channel_id: str) -> str:
@@ -87,6 +100,9 @@ def _fetch_video_details(youtube, video_ids: list[str], channel_db_id: int) -> l
                 "description": snippet.get("description", ""),
                 "published_at": snippet.get("publishedAt", ""),
                 "url": YOUTUBE_URL + vid,
+                "thumbnail_url": _best_thumbnail(
+                    snippet.get("thumbnails", {}), _VIDEO_THUMB_PREFERENCE
+                ),
             })
 
     return results

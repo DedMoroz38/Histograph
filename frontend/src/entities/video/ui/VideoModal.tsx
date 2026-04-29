@@ -89,6 +89,21 @@ export function VideoModal({
               opacity: 0.4,
             }}
           />
+          {/* Real thumbnail */}
+          {video.thumbnailUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={video.thumbnailUrl}
+              alt=""
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          )}
           <div
             style={{
               position: "absolute",
@@ -161,12 +176,47 @@ export function VideoModal({
               bottom: 12,
               left: 12,
               zIndex: 2,
-              fontSize: 12,
-              fontWeight: 600,
-              color: "rgba(255,255,255,0.85)",
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
             }}
           >
-            {video.channel}
+            {video.channelLogoUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={video.channelLogoUrl}
+                alt=""
+                referrerPolicy="no-referrer"
+                style={{
+                  width: 28,
+                  height: 28,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  border: "2px solid rgba(255,255,255,0.5)",
+                  flexShrink: 0,
+                }}
+              />
+            ) : (
+              <div
+                style={{
+                  width: 28,
+                  height: 28,
+                  borderRadius: "50%",
+                  background: `oklch(0.72 0.08 ${hue})`,
+                  border: "2px solid rgba(255,255,255,0.5)",
+                  flexShrink: 0,
+                }}
+              />
+            )}
+            <span
+              style={{
+                fontSize: 12,
+                fontWeight: 600,
+                color: "rgba(255,255,255,0.9)",
+              }}
+            >
+              {video.channel}
+            </span>
           </div>
         </div>
 
