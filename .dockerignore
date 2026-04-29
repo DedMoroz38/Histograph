@@ -1,0 +1,30 @@
+.git
+.github
+.env
+.env.*
+frontend/.env*
+*.pem
+
+# Python / parser (not needed in image)
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+*.egg-info/
+parser/
+
+# Build artifacts
+frontend/.next/
+frontend/node_modules/
+
+# Dev/test files
+.playwright-mcp/
+graphify-out/
+*.png
+*.log
+
+# DB temp files — the main videos.db IS needed (baked in as seed)
+*.db-shm
+*.db-wal
+videos_backup.db

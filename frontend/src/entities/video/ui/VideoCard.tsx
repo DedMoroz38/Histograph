@@ -53,8 +53,10 @@ export function VideoCard({
         borderRadius: 3,
         cursor: "pointer",
         overflow: "visible",
-        border: `1px solid ${hov || highlighted ? tc : pal.border}`,
         borderTop: `3px solid ${tc}`,
+        borderRight: `1px solid ${hov || highlighted ? tc : pal.border}`,
+        borderBottom: `1px solid ${hov || highlighted ? tc : pal.border}`,
+        borderLeft: `1px solid ${hov || highlighted ? tc : pal.border}`,
         opacity: dimmed ? 0.14 : isW ? 0.72 : 1,
         boxShadow: highlighted
           ? `0 0 0 2px ${tc}, 0 8px 28px rgba(0,0,0,0.15)`

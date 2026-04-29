@@ -5,7 +5,7 @@ let _authDb: Database.Database | null = null;
 
 function getAuthDb(): Database.Database {
   if (!_authDb) {
-    const dbPath = path.join(process.cwd(), "..", "videos.db");
+    const dbPath = process.env.DB_PATH ?? path.join(process.cwd(), "..", "videos.db");
     _authDb = new Database(dbPath);
     _authDb.pragma("journal_mode = WAL");
     _authDb.pragma("foreign_keys = ON");
