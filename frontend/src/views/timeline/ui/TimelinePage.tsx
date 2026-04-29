@@ -27,9 +27,9 @@ interface Props {
 }
 
 export function TimelinePage({ initialVideos, initialUserEmail, initialUserId, initialUserImage, initialUserName }: Props) {
-  const [colorTheme, setColorTheme] = useState<"light" | "dark">("light");
-  const [density, setDensity] = useState<"comfortable" | "compact">("comfortable");
-  const [showPeriodBands, setShowPeriodBands] = useState(true);
+  const [colorTheme] = useState<"light" | "dark">("light");
+  const density = "comfortable" as const;
+  const showPeriodBands = true;
   const [activeTheme, setActiveTheme] = useState<Theme | null>(null);
   const [activeEventId, setActiveEventId] = useState<EventId | null>(null);
   const [activePeriodIdx, setActivePeriodIdx] = useState<number | null>(null);
@@ -339,7 +339,7 @@ export function TimelinePage({ initialVideos, initialUserEmail, initialUserId, i
         onClick={() => setShowListView((v) => !v)}
         style={{
           position: "fixed",
-          bottom: 264,
+          bottom: 24,
           right: 24,
           zIndex: 901,
           height: 36,
@@ -359,75 +359,6 @@ export function TimelinePage({ initialVideos, initialUserEmail, initialUserId, i
       >
         {showListView ? "× Закрыть" : "≡ Список"}
       </button>
-
-      {/* Tweaks panel */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 24,
-          right: 24,
-          zIndex: 900,
-          background: dark ? "#1c1a17" : "#ffffff",
-          border: "1px solid rgba(128,128,128,0.18)",
-          borderRadius: 8,
-          padding: "16px 16px 12px",
-          minWidth: 210,
-          boxShadow: "0 8px 32px rgba(0,0,0,0.14)",
-          fontFamily: "var(--font-sans)",
-        }}
-      >
-        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c84b31", marginBottom: 16 }}>
-          Tweaks
-        </div>
-
-        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: dark ? "#aaa" : "#555", marginBottom: 7 }}>
-          Тема оформления
-        </div>
-        <div style={{ display: "flex", gap: 6, marginBottom: 16 }}>
-          {(["light", "dark"] as const).map((t) => (
-            <button key={t} onClick={() => setColorTheme(t)}
-              style={{ flex: 1, height: 29, borderRadius: 4, cursor: "pointer",
-                border: `1px solid ${colorTheme === t ? "#c84b31" : "rgba(128,128,128,0.22)"}`,
-                background: colorTheme === t ? "#c84b3118" : "transparent",
-                color: colorTheme === t ? "#c84b31" : (dark ? "#aaa" : "#666"),
-                fontSize: 11, fontWeight: 600, transition: "all 0.12s" }}>
-              {t === "light" ? "Светлая" : "Тёмная"}
-            </button>
-          ))}
-        </div>
-
-        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: dark ? "#aaa" : "#555", marginBottom: 7 }}>
-          Плотность
-        </div>
-        <div style={{ display: "flex", gap: 6, marginBottom: 16 }}>
-          {(["comfortable", "compact"] as const).map((d) => (
-            <button key={d} onClick={() => setDensity(d)}
-              style={{ flex: 1, height: 29, borderRadius: 4, cursor: "pointer",
-                border: `1px solid ${density === d ? "#c84b31" : "rgba(128,128,128,0.22)"}`,
-                background: density === d ? "#c84b3118" : "transparent",
-                color: density === d ? "#c84b31" : (dark ? "#aaa" : "#666"),
-                fontSize: 11, fontWeight: 600, transition: "all 0.12s" }}>
-              {d === "comfortable" ? "Просторно" : "Компактно"}
-            </button>
-          ))}
-        </div>
-
-        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: dark ? "#aaa" : "#555", marginBottom: 7 }}>
-          Периоды
-        </div>
-        <div style={{ display: "flex", gap: 6 }}>
-          {([true, false] as const).map((v) => (
-            <button key={String(v)} onClick={() => setShowPeriodBands(v)}
-              style={{ flex: 1, height: 29, borderRadius: 4, cursor: "pointer",
-                border: `1px solid ${showPeriodBands === v ? "#c84b31" : "rgba(128,128,128,0.22)"}`,
-                background: showPeriodBands === v ? "#c84b3118" : "transparent",
-                color: showPeriodBands === v ? "#c84b31" : (dark ? "#aaa" : "#666"),
-                fontSize: 11, fontWeight: 600, transition: "all 0.12s" }}>
-              {v ? "Показать" : "Скрыть"}
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
