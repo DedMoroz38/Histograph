@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: H
+      - generic [ref=e5]: XX ВЕК
+      - button "ВСЕ" [ref=e7] [cursor=pointer]
+      - button "⚔" [ref=e8] [cursor=pointer]
+      - button "⚑" [ref=e9] [cursor=pointer]
+      - button "◉" [ref=e10] [cursor=pointer]
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - img [ref=e13]
+          - generic [ref=e16]: "0"
+        - generic [ref=e17]: из 232
+      - button "●" [ref=e19] [cursor=pointer]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: HistographXX век
+        - generic [ref=e23]:
+          - generic [ref=e24]: "Сортировка:"
+          - button "По году" [ref=e25] [cursor=pointer]
+          - button "По длине" [ref=e26] [cursor=pointer]
+          - button "По теме" [ref=e27] [cursor=pointer]
+          - button "По каналу" [ref=e28] [cursor=pointer]
+        - generic [ref=e30]:
+          - generic [ref=e31]: ⌕
+          - textbox "Поиск видео, событий..." [ref=e32]
+        - generic [ref=e33]: 9 / 232
+      - generic [ref=e34]:
+        - button "Все события 232" [ref=e35] [cursor=pointer]:
+          - text: Все события
+          - generic [ref=e36]: "232"
+        - button "Революция 1905 2" [ref=e37] [cursor=pointer]:
+          - text: Революция 1905
+          - generic [ref=e39]: "2"
+        - button "Первая мировая 20" [ref=e40] [cursor=pointer]:
+          - text: Первая мировая
+          - generic [ref=e42]: "20"
+        - button "Революция 1917 19" [ref=e43] [cursor=pointer]:
+          - text: Революция 1917
+          - generic [ref=e45]: "19"
+        - button "Межвоенный период 26" [ref=e46] [cursor=pointer]:
+          - text: Межвоенный период
+          - generic [ref=e48]: "26"
+        - button "Вторая мировая 55" [ref=e49] [cursor=pointer]:
+          - text: Вторая мировая
+          - generic [ref=e51]: "55"
+        - button "Холодная война 97" [ref=e52] [cursor=pointer]:
+          - text: Холодная война
+          - generic [ref=e54]: "97"
+        - button "Распад СССР 29" [ref=e55] [cursor=pointer]:
+          - text: Распад СССР
+          - generic [ref=e57]: "29"
+        - button "Россия 1990-х 22" [ref=e58] [cursor=pointer]:
+          - text: Россия 1990-х
+          - generic [ref=e60]: "22"
+      - generic [ref=e3162]:
+        - generic [ref=e3166]:
+          - generic [ref=e3167]: 1900–1913
+          - generic [ref=e3168]: Рубеж веков
+          - generic [ref=e3169]: Индустриализация, рост городов и культурный расцвет накануне мировой катастрофы.
+        - button "Закрыть" [ref=e3170] [cursor=pointer]: ×
+      - generic [ref=e62]:
+        - generic [ref=e68] [cursor=pointer]:
+          - generic [ref=e70]: Агенты царской безопасности / Покушения на Александра II /Уроки истории / @MINAEVLIVE
+          - generic [ref=e71]:
+            - generic [ref=e72]: Общество
+            - button "отметить" [ref=e73]
+        - generic [ref=e80] [cursor=pointer]:
+          - generic [ref=e82]: Богатейший махинатор Империи. Предать всех и проиграть всё | ФАЙБ
+          - generic [ref=e83]:
+            - generic [ref=e84]: Общество
+            - button "отметить" [ref=e85]
+        - generic [ref=e92] [cursor=pointer]:
+          - generic [ref=e94]: "САЛТЫЧИХА: Как маньячка-дворянка творила ужас в центре Москвы / СЕРИЙНЫЙ НОМЕР 11 / @MINAEVLIVE"
+          - generic [ref=e95]:
+            - generic [ref=e96]: Общество
+            - button "отметить" [ref=e97]
+        - generic [ref=e104] [cursor=pointer]:
+          - generic [ref=e106]: РОМАНОВЫ. Расцвет и катастрофа богатейшей династии мира | ФАЙБ
+          - generic [ref=e107]:
+            - generic [ref=e108]: Общество
+            - button "отметить" [ref=e109]
+        - generic [ref=e116] [cursor=pointer]:
+          - generic [ref=e118]: Иллюминаты. Мировое правительство. Масоны. Разбор мифа | ФАЙБ
+          - generic [ref=e119]:
+            - generic [ref=e120]: Общество
+            - button "отметить" [ref=e121]
+        - generic [ref=e128] [cursor=pointer]:
+          - generic [ref=e130]: Революция 1905 / Первая русская революция / Уроки истории / МИНАЕВ
+          - generic [ref=e131]:
+            - generic [ref=e132]: Политика
+            - button "отметить" [ref=e133]
+        - generic [ref=e140] [cursor=pointer]:
+          - generic [ref=e142]: Русско-японская война 1904-1905 / Почему Россия проиграла Японии? / Уроки истории / МИНАЕВ
+          - generic [ref=e143]:
+            - generic [ref=e144]: Войны
+            - button "отметить" [ref=e145]
+        - generic [ref=e152] [cursor=pointer]:
+          - generic [ref=e154]: Столыпин / Реформы и служение Николаю II / Уроки истории / МИНАЕВ
+          - generic [ref=e155]:
+            - generic [ref=e156]: Политика
+            - button "отметить" [ref=e157]
+        - generic [ref=e164] [cursor=pointer]:
+          - generic [ref=e166]: "Титаник: История крупнейшей морской катастрофы XX века / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e167]:
+            - generic [ref=e168]: Общество
+            - button "отметить" [ref=e169]
+      - generic [ref=e2849]:
+        - generic [ref=e2851] [cursor=pointer]: Рубеж веков
+        - generic [ref=e2853] [cursor=pointer]: Первая мировая
+        - generic [ref=e2855] [cursor=pointer]: Межвоенный период
+        - generic [ref=e2857] [cursor=pointer]: Вторая мировая
+        - generic [ref=e2859] [cursor=pointer]: Холодная война
+        - generic [ref=e2861] [cursor=pointer]: Постсоветская эпоха
+        - generic [ref=e2864]: "1900"
+        - generic [ref=e2867]: "1910"
+        - generic [ref=e2870]: "1920"
+        - generic [ref=e2873]: "1930"
+        - generic [ref=e2876]: "1940"
+        - generic [ref=e2879]: "1950"
+        - generic [ref=e2882]: "1960"
+        - generic [ref=e2885]: "1970"
+        - generic [ref=e2888]: "1980"
+        - generic [ref=e2891]: "1990"
+        - generic [ref=e2894]: "2000"
+        - generic "1900 — Агенты царской безопасности / Покушения на Александра II /Уроки истории / @MINAEVLIVE" [ref=e2896] [cursor=pointer]
+        - generic "1900 — Богатейший махинатор Империи. Предать всех и проиграть всё | ФАЙБ" [ref=e2897] [cursor=pointer]
+        - 'generic "1900 — САЛТЫЧИХА: Как маньячка-дворянка творила ужас в центре Москвы / СЕРИЙНЫЙ НОМЕР 11 / @MINAEVLIVE" [ref=e2898] [cursor=pointer]'
+        - generic "1900 — РОМАНОВЫ. Расцвет и катастрофа богатейшей династии мира | ФАЙБ" [ref=e2899] [cursor=pointer]
+        - generic "1900 — Иллюминаты. Мировое правительство. Масоны. Разбор мифа | ФАЙБ" [ref=e2900] [cursor=pointer]
+        - generic "1905 — Революция 1905 / Первая русская революция / Уроки истории / МИНАЕВ" [ref=e2901] [cursor=pointer]
+        - generic "1905 — Русско-японская война 1904-1905 / Почему Россия проиграла Японии? / Уроки истории / МИНАЕВ" [ref=e2902] [cursor=pointer]
+        - generic "1911 — Столыпин / Реформы и служение Николаю II / Уроки истории / МИНАЕВ" [ref=e2903] [cursor=pointer]
+        - 'generic "1912 — Титаник: История крупнейшей морской катастрофы XX века / Уроки истории / @MINAEVLIVE" [ref=e2904] [cursor=pointer]'
+        - generic [ref=e3128]:
+          - generic [ref=e3131]: Войны
+          - generic [ref=e3134]: Политика
+          - generic [ref=e3137]: Общество
+    - generic [ref=e3138]:
+      - generic [ref=e3139]: Tweaks
+      - generic [ref=e3140]: Тема оформления
+      - generic [ref=e3141]:
+        - button "Светлая" [ref=e3142] [cursor=pointer]
+        - button "Тёмная" [ref=e3143] [cursor=pointer]
+      - generic [ref=e3144]: Плотность
+      - generic [ref=e3145]:
+        - button "Просторно" [ref=e3146] [cursor=pointer]
+        - button "Компактно" [ref=e3147] [cursor=pointer]
+      - generic [ref=e3148]: Периоды
+      - generic [ref=e3149]:
+        - button "Показать" [ref=e3150] [cursor=pointer]
+        - button "Скрыть" [ref=e3151] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e3157] [cursor=pointer]:
+    - img [ref=e3158]
+  - alert [ref=e3161]

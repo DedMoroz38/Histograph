@@ -1,0 +1,1488 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: H
+      - generic [ref=e5]: XX ВЕК
+      - button "ВСЕ" [ref=e7] [cursor=pointer]
+      - button "⚔" [ref=e8] [cursor=pointer]
+      - button "⚑" [ref=e9] [cursor=pointer]
+      - button "◉" [ref=e10] [cursor=pointer]
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - img [ref=e13]
+          - generic [ref=e16]: "0"
+        - generic [ref=e17]: из 232
+      - button "●" [ref=e19] [cursor=pointer]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: HistographXX век
+        - generic [ref=e23]:
+          - generic [ref=e24]: "Сортировка:"
+          - button "По году" [ref=e25] [cursor=pointer]
+          - button "По длине" [ref=e26] [cursor=pointer]
+          - button "По теме" [ref=e27] [cursor=pointer]
+          - button "По каналу" [ref=e28] [cursor=pointer]
+        - generic [ref=e30]:
+          - generic [ref=e31]: ⌕
+          - textbox "Поиск видео, событий..." [ref=e32]
+        - generic [ref=e33]: 232 видео
+      - generic [ref=e34]:
+        - button "Все события 232" [ref=e35] [cursor=pointer]:
+          - text: Все события
+          - generic [ref=e36]: "232"
+        - button "Революция 1905 2" [ref=e37] [cursor=pointer]:
+          - text: Революция 1905
+          - generic [ref=e39]: "2"
+        - button "Первая мировая 20" [ref=e40] [cursor=pointer]:
+          - text: Первая мировая
+          - generic [ref=e42]: "20"
+        - button "Революция 1917 19" [ref=e43] [cursor=pointer]:
+          - text: Революция 1917
+          - generic [ref=e45]: "19"
+        - button "Межвоенный период 26" [ref=e46] [cursor=pointer]:
+          - text: Межвоенный период
+          - generic [ref=e48]: "26"
+        - button "Вторая мировая 55" [ref=e49] [cursor=pointer]:
+          - text: Вторая мировая
+          - generic [ref=e51]: "55"
+        - button "Холодная война 97" [ref=e52] [cursor=pointer]:
+          - text: Холодная война
+          - generic [ref=e54]: "97"
+        - button "Распад СССР 29" [ref=e55] [cursor=pointer]:
+          - text: Распад СССР
+          - generic [ref=e57]: "29"
+        - button "Россия 1990-х 22" [ref=e58] [cursor=pointer]:
+          - text: Россия 1990-х
+          - generic [ref=e60]: "22"
+      - generic [ref=e62]:
+        - generic [ref=e68] [cursor=pointer]:
+          - generic [ref=e70]: Агенты царской безопасности / Покушения на Александра II /Уроки истории / @MINAEVLIVE
+          - generic [ref=e71]:
+            - generic [ref=e72]: Общество
+            - button "отметить" [ref=e73]
+        - generic [ref=e80] [cursor=pointer]:
+          - generic [ref=e82]: Богатейший махинатор Империи. Предать всех и проиграть всё | ФАЙБ
+          - generic [ref=e83]:
+            - generic [ref=e84]: Общество
+            - button "отметить" [ref=e85]
+        - generic [ref=e92] [cursor=pointer]:
+          - generic [ref=e94]: "САЛТЫЧИХА: Как маньячка-дворянка творила ужас в центре Москвы / СЕРИЙНЫЙ НОМЕР 11 / @MINAEVLIVE"
+          - generic [ref=e95]:
+            - generic [ref=e96]: Общество
+            - button "отметить" [ref=e97]
+        - generic [ref=e104] [cursor=pointer]:
+          - generic [ref=e106]: РОМАНОВЫ. Расцвет и катастрофа богатейшей династии мира | ФАЙБ
+          - generic [ref=e107]:
+            - generic [ref=e108]: Общество
+            - button "отметить" [ref=e109]
+        - generic [ref=e116] [cursor=pointer]:
+          - generic [ref=e118]: Иллюминаты. Мировое правительство. Масоны. Разбор мифа | ФАЙБ
+          - generic [ref=e119]:
+            - generic [ref=e120]: Общество
+            - button "отметить" [ref=e121]
+        - generic [ref=e128] [cursor=pointer]:
+          - generic [ref=e130]: Революция 1905 / Первая русская революция / Уроки истории / МИНАЕВ
+          - generic [ref=e131]:
+            - generic [ref=e132]: Политика
+            - button "отметить" [ref=e133]
+        - generic [ref=e140] [cursor=pointer]:
+          - generic [ref=e142]: Русско-японская война 1904-1905 / Почему Россия проиграла Японии? / Уроки истории / МИНАЕВ
+          - generic [ref=e143]:
+            - generic [ref=e144]: Войны
+            - button "отметить" [ref=e145]
+        - generic [ref=e152] [cursor=pointer]:
+          - generic [ref=e154]: Столыпин / Реформы и служение Николаю II / Уроки истории / МИНАЕВ
+          - generic [ref=e155]:
+            - generic [ref=e156]: Политика
+            - button "отметить" [ref=e157]
+        - generic [ref=e164] [cursor=pointer]:
+          - generic [ref=e166]: "Титаник: История крупнейшей морской катастрофы XX века / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e167]:
+            - generic [ref=e168]: Общество
+            - button "отметить" [ref=e169]
+        - generic [ref=e176] [cursor=pointer]:
+          - generic [ref=e178]: "НЕФТЬ: История войны / Простовещи / МИНАЕВ"
+          - generic [ref=e179]:
+            - generic [ref=e180]: Войны
+            - button "отметить" [ref=e181]
+        - generic [ref=e188] [cursor=pointer]:
+          - generic [ref=e190]: Пропавшие в Антарктиде. Невероятная история выживания экспедиции Шеклтона
+          - generic [ref=e191]:
+            - generic [ref=e192]: Общество
+            - button "отметить" [ref=e193]
+        - generic [ref=e200] [cursor=pointer]:
+          - generic [ref=e202]: Как детские сказки привели к Первой Мировой | ФАЙБ
+          - generic [ref=e203]:
+            - generic [ref=e204]: Войны
+            - button "отметить" [ref=e205]
+        - generic [ref=e212] [cursor=pointer]:
+          - generic [ref=e214]: "Аньелли: Ювентус, FIAT и скандальная дружба с Муссолини / Истории миллиардов @MINAEVLIVE"
+          - generic [ref=e215]:
+            - generic [ref=e216]: Войны
+            - button "отметить" [ref=e217]
+        - generic [ref=e224] [cursor=pointer]:
+          - generic [ref=e226]: Первая мировая война / Причины, события и итоги Первой мировой / Уроки истории / МИНАЕВ
+          - generic [ref=e227]:
+            - generic [ref=e228]: Войны
+            - button "отметить" [ref=e229]
+        - generic [ref=e236] [cursor=pointer]:
+          - generic [ref=e238]: РАСПУТИН. Загадка последнего старца империи | ФАЙБ
+          - generic [ref=e239]:
+            - generic [ref=e240]: Общество
+            - button "отметить" [ref=e241]
+        - generic [ref=e248] [cursor=pointer]:
+          - generic [ref=e250]: Атака мертвецов / Оборона крепости Осовец / Уроки истории / МИНАЕВ
+          - generic [ref=e251]:
+            - generic [ref=e252]: Войны
+            - button "отметить" [ref=e253]
+        - generic [ref=e260] [cursor=pointer]:
+          - generic [ref=e262]: ЮСУПОВЫ. Проклятие богатейшей семьи Российской империи | ФАЙБ
+          - generic [ref=e263]:
+            - generic [ref=e264]: Общество
+            - button "отметить" [ref=e265]
+        - generic [ref=e272] [cursor=pointer]:
+          - generic [ref=e274]: Григорий Распутин / Последние годы Романовых / Уроки истории / МИНАЕВ
+          - generic [ref=e275]:
+            - generic [ref=e276]: Общество
+            - button "отметить" [ref=e277]
+        - generic [ref=e284] [cursor=pointer]:
+          - generic [ref=e286]: Октябрьская революция / МИНАЕВ
+          - generic [ref=e287]:
+            - generic [ref=e288]: Политика
+            - button "отметить" [ref=e289]
+        - generic [ref=e296] [cursor=pointer]:
+          - generic [ref=e298]: Как коммунисты устроили революцию в России?
+          - generic [ref=e299]:
+            - generic [ref=e300]: Политика
+            - button "отметить" [ref=e301]
+        - generic [ref=e308] [cursor=pointer]:
+          - generic [ref=e310]: Февральская революция / Отречение Романовых и ошибки Николая II / Уроки истории /МИНАЕВ
+          - generic [ref=e311]:
+            - generic [ref=e312]: Политика
+            - button "отметить" [ref=e313]
+        - generic [ref=e320] [cursor=pointer]:
+          - generic [ref=e322]: Самый могущественный тайный орден. От убийства царя до завоевания космоса | ФАЙБ
+          - generic [ref=e323]:
+            - generic [ref=e324]: Политика
+            - button "отметить" [ref=e325]
+        - generic [ref=e332] [cursor=pointer]:
+          - generic [ref=e334]: "Матильда Кшесинская: Николай II, коррупционные схемы и революция 1917 года / Долецкая / МИНАЕВ"
+          - generic [ref=e335]:
+            - generic [ref=e336]: Политика
+            - button "отметить" [ref=e337]
+        - generic [ref=e344] [cursor=pointer]:
+          - generic [ref=e346]: Булгаков / Зависимость, мистика и Сталин в жизни Мастера / ЛИЧНОСТИ / @MINAEVLIVE
+          - generic [ref=e347]:
+            - generic [ref=e348]: Войны
+            - button "отметить" [ref=e349]
+        - generic [ref=e356] [cursor=pointer]:
+          - generic [ref=e358]: "Мата Хари: Куртизанка или легендарная шпионка Первой мировой войны? / ДОЛЕЦКАЯ / @MINAEVLIVE"
+          - generic [ref=e359]:
+            - generic [ref=e360]: Войны
+            - button "отметить" [ref=e361]
+        - generic [ref=e368] [cursor=pointer]:
+          - generic [ref=e370]: "Владимир Ленин: Гений революции или талантливый манипулятор? / Личности @MINAEVLIVE"
+          - generic [ref=e371]:
+            - generic [ref=e372]: Политика
+            - button "отметить" [ref=e373]
+        - generic [ref=e380] [cursor=pointer]:
+          - generic [ref=e382]: Корниловский мятеж / Как конфликт Керенского и Корнилова помог большевикам / Уроки истории / МИНАЕВ
+          - generic [ref=e383]:
+            - generic [ref=e384]: Общество
+            - button "отметить" [ref=e385]
+        - generic [ref=e392] [cursor=pointer]:
+          - generic [ref=e394]: "Александр Колчак: Герой Гражданской войны или кровавый диктатор? / Личности / МИНАЕВ"
+          - generic [ref=e395]:
+            - generic [ref=e396]: Войны
+            - button "отметить" [ref=e397]
+        - generic [ref=e404] [cursor=pointer]:
+          - generic [ref=e406]: Почему началась Гражданская война в России? / Гражданская война / Часть 1/ Уроки истории / МИНАЕВ
+          - generic [ref=e407]:
+            - generic [ref=e408]: Войны
+            - button "отметить" [ref=e409]
+        - generic [ref=e416] [cursor=pointer]:
+          - generic [ref=e418]: Страшная Тайна Cветящихся женщин из Америки | Радиевые девушки
+          - generic [ref=e419]:
+            - generic [ref=e420]: Общество
+            - button "отметить" [ref=e421]
+        - generic [ref=e428] [cursor=pointer]:
+          - generic [ref=e430]: Главный Мошенник в истории
+          - generic [ref=e431]:
+            - generic [ref=e432]: Общество
+            - button "отметить" [ref=e433]
+        - generic [ref=e440] [cursor=pointer]:
+          - generic [ref=e442]: "КОМАРОВ: Как ловили первого маньяка СССР и при чём тут Булгаков / СЕРИЙНЫЙ НОМЕР 7 / @MINAEVLIVE"
+          - generic [ref=e443]:
+            - generic [ref=e444]: Войны
+            - button "отметить" [ref=e445]
+        - generic [ref=e452] [cursor=pointer]:
+          - generic [ref=e454]: Барон Унгерн / Белый офицер или Чингисхан XX века / Личности / МИНАЕВ
+          - generic [ref=e455]:
+            - generic [ref=e456]: Войны
+            - button "отметить" [ref=e457]
+        - generic [ref=e464] [cursor=pointer]:
+          - generic [ref=e466]: Почему Красная армия победила в Гражданской войне в России? / Уроки истории / МИНАЕВ
+          - generic [ref=e467]:
+            - generic [ref=e468]: Войны
+            - button "отметить" [ref=e469]
+        - generic [ref=e476] [cursor=pointer]:
+          - generic [ref=e478]: "Сергей Есенин: Русская страсть Айседоры Дункан / ДОЛЕЦКАЯ / @MINAEVLIVE"
+          - generic [ref=e479]:
+            - generic [ref=e480]: Общество
+            - button "отметить" [ref=e481]
+        - generic [ref=e488] [cursor=pointer]:
+          - generic [ref=e490]: Государство, породившее Гитлера | ФАЙБ
+          - generic [ref=e491]:
+            - generic [ref=e492]: Общество
+            - button "отметить" [ref=e493]
+        - generic [ref=e500] [cursor=pointer]:
+          - generic [ref=e502]: "Деньги Аль Капоне #shorts"
+          - generic [ref=e503]:
+            - generic [ref=e504]: Общество
+            - button "отметить" [ref=e505]
+        - generic [ref=e512] [cursor=pointer]:
+          - generic [ref=e514]: Люди исчезают 100 лет в поисках Затерянного Города
+          - generic [ref=e515]:
+            - generic [ref=e516]: Общество
+            - button "отметить" [ref=e517]
+        - generic [ref=e524] [cursor=pointer]:
+          - generic [ref=e526]: Еврейская мафия. Банды Нью-Йорка | ФАЙБ
+          - generic [ref=e527]:
+            - generic [ref=e528]: Общество
+            - button "отметить" [ref=e529]
+        - generic [ref=e536] [cursor=pointer]:
+          - generic [ref=e538]: МАЯКОВСКИЙ, о котором не расскажут в школе | ФАЙБ
+          - generic [ref=e539]:
+            - generic [ref=e540]: Общество
+            - button "отметить" [ref=e541]
+        - generic [ref=e548] [cursor=pointer]:
+          - generic [ref=e550]: "Сергей Есенин: Настоящая история без школьных мифов / Личности / МИНАЕВ"
+          - generic [ref=e551]:
+            - generic [ref=e552]: Общество
+            - button "отметить" [ref=e553]
+        - generic [ref=e560] [cursor=pointer]:
+          - generic [ref=e562]: 1920-е БЛЕСТЯЩИЙ ДЕБЮТ / История Московского спорта / МИНАЕВ
+          - generic [ref=e563]:
+            - generic [ref=e564]: Общество
+            - button "отметить" [ref=e565]
+        - generic [ref=e572] [cursor=pointer]:
+          - generic [ref=e574]: Загадочная История Кристин Коллинз. Куда исчез ее сын?
+          - generic [ref=e575]:
+            - generic [ref=e576]: Общество
+            - button "отметить" [ref=e577]
+        - generic [ref=e584] [cursor=pointer]:
+          - generic [ref=e586]: "Черный вторник 1929 #экономика #история #сша #кризис"
+          - generic [ref=e587]:
+            - generic [ref=e588]: Общество
+            - button "отметить" [ref=e589]
+        - generic [ref=e596] [cursor=pointer]:
+          - generic [ref=e598]: "Юбки после войны #экономика #история #кризис #великаядепрессия"
+          - generic [ref=e599]:
+            - generic [ref=e600]: Общество
+            - button "отметить" [ref=e601]
+        - generic [ref=e608] [cursor=pointer]:
+          - generic [ref=e610]: Гибель Аль Капоне. От Гангстера №1 до глупого неудачника
+          - generic [ref=e611]:
+            - generic [ref=e612]: Общество
+            - button "отметить" [ref=e613]
+        - generic [ref=e620] [cursor=pointer]:
+          - generic [ref=e622]: "Великий экономист #экономика #история #кризис #великаядепрессия"
+          - generic [ref=e623]:
+            - generic [ref=e624]: Общество
+            - button "отметить" [ref=e625]
+        - generic [ref=e632] [cursor=pointer]:
+          - generic [ref=e634]: Рахманинов / Руки на миллион / Личности / МИНАЕВ
+          - generic [ref=e635]:
+            - generic [ref=e636]: Общество
+            - button "отметить" [ref=e637]
+        - generic [ref=e644] [cursor=pointer]:
+          - generic [ref=e646]: Иван Бунин / Жизнь в эмиграции, Нобелевская премия и нищета / Личности / МИНАЕВ
+          - generic [ref=e647]:
+            - generic [ref=e648]: Общество
+            - button "отметить" [ref=e649]
+        - generic [ref=e656] [cursor=pointer]:
+          - generic [ref=e658]: Главный кризис в истории. Великая депрессия США
+          - generic [ref=e659]:
+            - generic [ref=e660]: Общество
+            - button "отметить" [ref=e661]
+        - generic [ref=e668] [cursor=pointer]:
+          - generic [ref=e670]: Великая Рецессия Америки
+          - generic [ref=e671]:
+            - generic [ref=e672]: Общество
+            - button "отметить" [ref=e673]
+        - generic [ref=e680] [cursor=pointer]:
+          - generic [ref=e682]: "Челюскинцы: Как сто человек выживали на льдине в Арктике? @MINAEVLIVE"
+          - generic [ref=e683]:
+            - generic [ref=e684]: Общество
+            - button "отметить" [ref=e685]
+        - generic [ref=e692] [cursor=pointer]:
+          - generic [ref=e694]: МУССОЛИНИ. Триумф и катастрофа крестного отца фашизма | ФАЙБ
+          - generic [ref=e695]:
+            - generic [ref=e696]: Общество
+            - button "отметить" [ref=e697]
+        - generic [ref=e704] [cursor=pointer]:
+          - generic [ref=e706]: Бенито Муссолини и история фашизма в Италии / Уроки истории / @MINAEVLIVE
+          - generic [ref=e707]:
+            - generic [ref=e708]: Общество
+            - button "отметить" [ref=e709]
+        - generic [ref=e716] [cursor=pointer]:
+          - generic [ref=e718]: 1930-е СТАНОВЛЕНИЕ СПАРТАКА / История Московского спорта / МИНАЕВ
+          - generic [ref=e719]:
+            - generic [ref=e720]: Общество
+            - button "отметить" [ref=e721]
+        - generic [ref=e728] [cursor=pointer]:
+          - generic [ref=e730]: "Максим Горький: История не для школьной программы / Личности / МИНАЕВ"
+          - generic [ref=e731]:
+            - generic [ref=e732]: Общество
+            - button "отметить" [ref=e733]
+        - generic [ref=e740] [cursor=pointer]:
+          - generic [ref=e742]: Чарли Чаплин. Реальная история жизни лучшего актера в истории
+          - generic [ref=e743]:
+            - generic [ref=e744]: Общество
+            - button "отметить" [ref=e745]
+        - generic [ref=e752] [cursor=pointer]:
+          - generic [ref=e754]: Гражданская война в Испании / Почему Сталин помогал Испании / Уроки истории / МИНАЕВ
+          - generic [ref=e755]:
+            - generic [ref=e756]: Войны
+            - button "отметить" [ref=e757]
+        - generic [ref=e764] [cursor=pointer]:
+          - generic [ref=e766]: Большое интервью со Сталингулагом // Минаев
+          - generic [ref=e767]:
+            - generic [ref=e768]: Общество
+            - button "отметить" [ref=e769]
+        - generic [ref=e776] [cursor=pointer]:
+          - generic [ref=e778]: Нацистский Титаник / Катастрофа дирижабля «ГИНДЕНБУРГ» / Уроки истории / @MINAEVLIVE
+          - generic [ref=e779]:
+            - generic [ref=e780]: Общество
+            - button "отметить" [ref=e781]
+        - generic [ref=e788] [cursor=pointer]:
+          - generic [ref=e790]: Политический Макдоналдс. Как идеология изменила мир и нас самих | ФАЙБ
+          - generic [ref=e791]:
+            - generic [ref=e792]: Политика
+            - button "отметить" [ref=e793]
+        - generic [ref=e800] [cursor=pointer]:
+          - generic [ref=e802]: Мюнхенский сговор / Как началась Вторая мировая война? / Уроки истории / МИНАЕВ LIVE
+          - generic [ref=e803]:
+            - generic [ref=e804]: Войны
+            - button "отметить" [ref=e805]
+        - generic [ref=e812] [cursor=pointer]:
+          - generic [ref=e814]: Кембриджская пятерка / Как британские аристократы работали на СССР / Уроки истории / МИНАЕВ
+          - generic [ref=e815]:
+            - generic [ref=e816]: Общество
+            - button "отметить" [ref=e817]
+        - generic [ref=e824] [cursor=pointer]:
+          - generic [ref=e826]: "Вторая мировая: 1940 / Битва за Британию / Вступление Италии в войну / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e827]:
+            - generic [ref=e828]: Войны
+            - button "отметить" [ref=e829]
+        - generic [ref=e836] [cursor=pointer]:
+          - generic [ref=e838]: Как Гитлер обманул немцев
+          - generic [ref=e839]:
+            - generic [ref=e840]: Войны
+            - button "отметить" [ref=e841]
+        - generic [ref=e848] [cursor=pointer]:
+          - generic [ref=e850]: Как нацисты кинули Европу
+          - generic [ref=e851]:
+            - generic [ref=e852]: Войны
+            - button "отметить" [ref=e853]
+        - generic [ref=e860] [cursor=pointer]:
+          - generic [ref=e862]: "Вторая мировая война: 1940 / Дюнкерк, падение Франции и Норвегии / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e863]:
+            - generic [ref=e864]: Войны
+            - button "отметить" [ref=e865]
+        - generic [ref=e872] [cursor=pointer]:
+          - generic [ref=e874]: "Марлен Дитрих: Взлеты и падения голливудской актрисы / Личности / @MINAEVLIVE"
+          - generic [ref=e875]:
+            - generic [ref=e876]: Войны
+            - button "отметить" [ref=e877]
+        - generic [ref=e884] [cursor=pointer]:
+          - generic [ref=e886]: Женщины, роскошь, алкоголизм, тюрьма. Неизвестный сын Сталина | ФАЙБ
+          - generic [ref=e887]:
+            - generic [ref=e888]: Общество
+            - button "отметить" [ref=e889]
+        - generic [ref=e896] [cursor=pointer]:
+          - generic [ref=e898]: Врач, маньяк или мошенник? Кто придумал лоботомию | ФАЙБ
+          - generic [ref=e899]:
+            - generic [ref=e900]: Общество
+            - button "отметить" [ref=e901]
+        - generic [ref=e908] [cursor=pointer]:
+          - generic [ref=e910]: ТРЕТИЙ РЕЙХ. Пирамида государственного масштаба | ФАЙБ
+          - generic [ref=e911]:
+            - generic [ref=e912]: Войны
+            - button "отметить" [ref=e913]
+        - generic [ref=e920] [cursor=pointer]:
+          - generic [ref=e922]: БЛОКАДА ЛЕНИНГРАДА / Вторая мировая война / Уроки истории @MINAEVLIVE
+          - generic [ref=e923]:
+            - generic [ref=e924]: Войны
+            - button "отметить" [ref=e925]
+        - generic [ref=e932] [cursor=pointer]:
+          - generic [ref=e934]: «Мирные» методы Гитлера
+          - generic [ref=e935]:
+            - generic [ref=e936]: Войны
+            - button "отметить" [ref=e937]
+        - generic [ref=e944] [cursor=pointer]:
+          - generic [ref=e946]: Атака на Перл-Харбор / Почему Япония напала на США / Уроки истории / @MINAEVLIVE
+          - generic [ref=e947]:
+            - generic [ref=e948]: Общество
+            - button "отметить" [ref=e949]
+        - generic [ref=e956] [cursor=pointer]:
+          - generic [ref=e958]: "1941: Битва за Москву / Вторая мировая война / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e959]:
+            - generic [ref=e960]: Войны
+            - button "отметить" [ref=e961]
+        - generic [ref=e968] [cursor=pointer]:
+          - generic [ref=e970]: "1941: Нападение на СССР / Вторая мировая война / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e971]:
+            - generic [ref=e972]: Общество
+            - button "отметить" [ref=e973]
+        - generic [ref=e980] [cursor=pointer]:
+          - generic [ref=e982]: "ПАЛАЧ В ЮБКЕ: Как пособница нацистов 30 лет скрывалась от КГБ / Серийный номер 15 @MINAEVLIVE"
+          - generic [ref=e983]:
+            - generic [ref=e984]: Общество
+            - button "отметить" [ref=e985]
+        - generic [ref=e992] [cursor=pointer]:
+          - generic [ref=e994]: Почему Гитлер не смог захватить весь мир
+          - generic [ref=e995]:
+            - generic [ref=e996]: Войны
+            - button "отметить" [ref=e997]
+        - generic [ref=e1004] [cursor=pointer]:
+          - generic [ref=e1006]: "Рихард Зорге: Как советский супершпион изменил ход Второй Мировой войны / Личности / МИНАЕВ"
+          - generic [ref=e1007]:
+            - generic [ref=e1008]: Войны
+            - button "отметить" [ref=e1009]
+        - generic [ref=e1016] [cursor=pointer]:
+          - generic [ref=e1018]: "1942: Мидуэй, Битва за Крым и Ржевское Сражение / Вторая мировая война / Уроки истории /@MINAEVLIVE"
+          - generic [ref=e1019]:
+            - generic [ref=e1020]: Войны
+            - button "отметить" [ref=e1021]
+        - generic [ref=e1028] [cursor=pointer]:
+          - generic [ref=e1030]: Кто обогатился на мировых войнах?
+          - generic [ref=e1031]:
+            - generic [ref=e1032]: Общество
+            - button "отметить" [ref=e1033]
+        - generic [ref=e1040] [cursor=pointer]:
+          - generic [ref=e1042]: BMW и Mercedes / БИТВА БРЕНДОВ
+          - generic [ref=e1043]:
+            - generic [ref=e1044]: Войны
+            - button "отметить" [ref=e1045]
+        - generic [ref=e1052] [cursor=pointer]:
+          - generic [ref=e1054]: Аненербе / Чем занималась самая секретная организация Третьего рейха? / Уроки истории / МИНАЕВ
+          - generic [ref=e1055]:
+            - generic [ref=e1056]: Войны
+            - button "отметить" [ref=e1057]
+        - generic [ref=e1064] [cursor=pointer]:
+          - generic [ref=e1066]: "1942: Битва за Кавказ / Вторая мировая война / Уроки истории / МИНАЕВ LIVE"
+          - generic [ref=e1067]:
+            - generic [ref=e1068]: Войны
+            - button "отметить" [ref=e1069]
+        - generic [ref=e1076] [cursor=pointer]:
+          - generic [ref=e1078]: Кто финансировал Третий Рейх? / Запрещенная история Второй мировой / МИНАЕВ
+          - generic [ref=e1079]:
+            - generic [ref=e1080]: Войны
+            - button "отметить" [ref=e1081]
+        - generic [ref=e1088] [cursor=pointer]:
+          - generic [ref=e1090]: "Тайны Банка Ватикана: масоны, итальянская мафия и союз с Муссолини / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e1091]:
+            - generic [ref=e1092]: Войны
+            - button "отметить" [ref=e1093]
+        - generic [ref=e1100] [cursor=pointer]:
+          - generic [ref=e1102]: Самая Безумная Секретная операция Второй Мировой
+          - generic [ref=e1103]:
+            - generic [ref=e1104]: Войны
+            - button "отметить" [ref=e1105]
+        - generic [ref=e1112] [cursor=pointer]:
+          - generic [ref=e1114]: "1943: Крах надежд Гитлера / Вторая мировая война / Уроки истории @MINAEVLIVE"
+          - generic [ref=e1115]:
+            - generic [ref=e1116]: Войны
+            - button "отметить" [ref=e1117]
+        - generic [ref=e1124] [cursor=pointer]:
+          - generic [ref=e1126]: Никола Тесла. История большого обмана | ФАЙБ
+          - generic [ref=e1127]:
+            - generic [ref=e1128]: Общество
+            - button "отметить" [ref=e1129]
+        - generic [ref=e1136] [cursor=pointer]:
+          - generic [ref=e1138]: "1943: Битва за Киев, Тегеранская конференция и война на Тихом океане / Вторая мировая @MINAEVLIVE"
+          - generic [ref=e1139]:
+            - generic [ref=e1140]: Войны
+            - button "отметить" [ref=e1141]
+        - generic [ref=e1148] [cursor=pointer]:
+          - generic [ref=e1150]: "1943: Курская дуга, Победы на Восточном фронте и Капитуляция Италии @MINAEVLIVE"
+          - generic [ref=e1151]:
+            - generic [ref=e1152]: Общество
+            - button "отметить" [ref=e1153]
+        - generic [ref=e1160] [cursor=pointer]:
+          - generic [ref=e1162]: Черчилль / Авантюрист и Герой нации / Личности / МИНАЕВ
+          - generic [ref=e1163]:
+            - generic [ref=e1164]: Войны
+            - button "отметить" [ref=e1165]
+        - generic [ref=e1172] [cursor=pointer]:
+          - generic [ref=e1174]: "ЙОЗЕФ МЕНГЕЛЕ: Нацистский врач-убийца из лагеря Освенцим / СЕРИЙНЫЙ НОМЕР 8 /@MINAEVLIVE"
+          - generic [ref=e1175]:
+            - generic [ref=e1176]: Войны
+            - button "отметить" [ref=e1177]
+        - generic [ref=e1184] [cursor=pointer]:
+          - generic [ref=e1186]: "1944: Варшавское восстание и зверства Третьего Рейха / Вторая мировая война @MINAEVLIVE"
+          - generic [ref=e1187]:
+            - generic [ref=e1188]: Общество
+            - button "отметить" [ref=e1189]
+        - generic [ref=e1196] [cursor=pointer]:
+          - generic [ref=e1198]: "1944: Высадка в Нормандии и операция «Багратион» / Вторая мировая война @MINAEVLIVE"
+          - generic [ref=e1199]:
+            - generic [ref=e1200]: Войны
+            - button "отметить" [ref=e1201]
+        - generic [ref=e1208] [cursor=pointer]:
+          - generic [ref=e1210]: Пропаганда Геббельса / Вторая мировая война @MINAEVLIVE
+          - generic [ref=e1211]:
+            - generic [ref=e1212]: Войны
+            - button "отметить" [ref=e1213]
+        - generic [ref=e1220] [cursor=pointer]:
+          - generic [ref=e1222]: Убить Гитлера / Операция Валькирия / Уроки истории / МИНАЕВ
+          - generic [ref=e1223]:
+            - generic [ref=e1224]: Общество
+            - button "отметить" [ref=e1225]
+        - generic [ref=e1232] [cursor=pointer]:
+          - generic [ref=e1234]: "Генерал де Голль: Герой, ставший диктатором? / Уроки истории / МИНАЕВ"
+          - generic [ref=e1235]:
+            - generic [ref=e1236]: Войны
+            - button "отметить" [ref=e1237]
+        - generic [ref=e1244] [cursor=pointer]:
+          - generic [ref=e1246]: "1944: Выход к границам СССР / Вторая мировая война / Уроки истории @MINAEVLIVE"
+          - generic [ref=e1247]:
+            - generic [ref=e1248]: Войны
+            - button "отметить" [ref=e1249]
+        - generic [ref=e1256] [cursor=pointer]:
+          - generic [ref=e1258]: Как доллар подчинил мир? История обмана
+          - generic [ref=e1259]:
+            - generic [ref=e1260]: Войны
+            - button "отметить" [ref=e1261]
+        - generic [ref=e1268] [cursor=pointer]:
+          - generic [ref=e1270]: Убийство Гитлера. Главный провал 20го века
+          - generic [ref=e1271]:
+            - generic [ref=e1272]: Общество
+            - button "отметить" [ref=e1273]
+        - generic [ref=e1280] [cursor=pointer]:
+          - generic [ref=e1282]: Мой любимый пропагандист (и Сталина тоже) | ФАЙБ
+          - generic [ref=e1283]:
+            - generic [ref=e1284]: Общество
+            - button "отметить" [ref=e1285]
+        - generic [ref=e1292] [cursor=pointer]:
+          - generic [ref=e1294]: "АТОМНАЯ БОМБАРДИРОВКА: Хиросима и Нагасаки / Уроки истории / МИНАЕВ"
+          - generic [ref=e1295]:
+            - generic [ref=e1296]: Общество
+            - button "отметить" [ref=e1297]
+        - generic [ref=e1304] [cursor=pointer]:
+          - generic [ref=e1306]: Почему люди обожают Японию | ФАЙБ
+          - generic [ref=e1307]:
+            - generic [ref=e1308]: Войны
+            - button "отметить" [ref=e1309]
+        - generic [ref=e1316] [cursor=pointer]:
+          - generic [ref=e1318]: 1940-е ДНИ ПОБЕД / История Московского спорта / МИНАЕВ
+          - generic [ref=e1319]:
+            - generic [ref=e1320]: Общество
+            - button "отметить" [ref=e1321]
+        - generic [ref=e1328] [cursor=pointer]:
+          - generic [ref=e1330]: Нюрнберг / Уроки истории / МИНАЕВ (English subtitles)
+          - generic [ref=e1331]:
+            - generic [ref=e1332]: Общество
+            - button "отметить" [ref=e1333]
+        - generic [ref=e1340] [cursor=pointer]:
+          - generic [ref=e1342]: Как появилась Северная и Южная Корея
+          - generic [ref=e1343]:
+            - generic [ref=e1344]: Общество
+            - button "отметить" [ref=e1345]
+        - generic [ref=e1352] [cursor=pointer]:
+          - generic [ref=e1354]: "Вторая мировая война: 1939 / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e1355]:
+            - generic [ref=e1356]: Войны
+            - button "отметить" [ref=e1357]
+        - generic [ref=e1364] [cursor=pointer]:
+          - generic [ref=e1366]: Почему главные палачи Третьего Рейха избежали наказания? | ФАЙБ
+          - generic [ref=e1367]:
+            - generic [ref=e1368]: Общество
+            - button "отметить" [ref=e1369]
+        - generic [ref=e1376] [cursor=pointer]:
+          - generic [ref=e1378]: Отряд 731 / Японские фабрики смерти / Уроки истории / МИНАЕВ
+          - generic [ref=e1379]:
+            - generic [ref=e1380]: Войны
+            - button "отметить" [ref=e1381]
+        - generic [ref=e1388] [cursor=pointer]:
+          - generic [ref=e1390]: Страна-катастрофа. Как Южная Корея пожирает себя
+          - generic [ref=e1391]:
+            - generic [ref=e1392]: Войны
+            - button "отметить" [ref=e1393]
+        - generic [ref=e1400] [cursor=pointer]:
+          - generic [ref=e1402]: Юкио Мисима / Последний самурай Японии / Личности / @MINAEVLIVE
+          - generic [ref=e1403]:
+            - generic [ref=e1404]: Войны
+            - button "отметить" [ref=e1405]
+        - generic [ref=e1412] [cursor=pointer]:
+          - generic [ref=e1414]: СМЕРШ против немецких агентов / Уроки истории @MINAEVLIVE
+          - generic [ref=e1415]:
+            - generic [ref=e1416]: Общество
+            - button "отметить" [ref=e1417]
+        - generic [ref=e1424] [cursor=pointer]:
+          - generic [ref=e1426]: ВИНДЗОРЫ. Самая развратная династия | ФАЙБ
+          - generic [ref=e1427]:
+            - generic [ref=e1428]: Общество
+            - button "отметить" [ref=e1429]
+        - generic [ref=e1436] [cursor=pointer]:
+          - generic [ref=e1438]: Почему все в восторге от Черчилля? | ФАЙБ
+          - generic [ref=e1439]:
+            - generic [ref=e1440]: Войны
+            - button "отметить" [ref=e1441]
+        - generic [ref=e1448] [cursor=pointer]:
+          - generic [ref=e1450]: "1945: Капитуляция Японии / Как закончилась Вторая мировая война / Уроки истории / МИНАЕВ"
+          - generic [ref=e1451]:
+            - generic [ref=e1452]: Войны
+            - button "отметить" [ref=e1453]
+        - generic [ref=e1460] [cursor=pointer]:
+          - generic [ref=e1462]: Северная и Южная Корея / Корейская война / Уроки истории / МИНАЕВ
+          - generic [ref=e1463]:
+            - generic [ref=e1464]: Войны
+            - button "отметить" [ref=e1465]
+        - generic [ref=e1472] [cursor=pointer]:
+          - generic [ref=e1474]: Коммунизм в Европе
+          - generic [ref=e1475]:
+            - generic [ref=e1476]: Общество
+            - button "отметить" [ref=e1477]
+        - generic [ref=e1484] [cursor=pointer]:
+          - generic [ref=e1486]: СССР после войны
+          - generic [ref=e1487]:
+            - generic [ref=e1488]: Общество
+            - button "отметить" [ref=e1489]
+        - generic [ref=e1496] [cursor=pointer]:
+          - generic [ref=e1498]: Что случилось с Мэрилин Монро? Биография легендарной актрисы
+          - generic [ref=e1499]:
+            - generic [ref=e1500]: Общество
+            - button "отметить" [ref=e1501]
+        - generic [ref=e1508] [cursor=pointer]:
+          - generic [ref=e1510]: "Северная vs Южная Корея #экономика #история #политика"
+          - generic [ref=e1511]:
+            - generic [ref=e1512]: Войны
+            - button "отметить" [ref=e1513]
+        - generic [ref=e1520] [cursor=pointer]:
+          - generic [ref=e1522]: "Анастас Микоян: Кулинарная революция СССР / Личности / МИНАЕВ"
+          - generic [ref=e1523]:
+            - generic [ref=e1524]: Общество
+            - button "отметить" [ref=e1525]
+        - generic [ref=e1532] [cursor=pointer]:
+          - generic [ref=e1534]: Моссад / Самая закрытая спецслужба мира / Уроки истории / МИНАЕВ
+          - generic [ref=e1535]:
+            - generic [ref=e1536]: Общество
+            - button "отметить" [ref=e1537]
+        - generic [ref=e1544] [cursor=pointer]:
+          - generic [ref=e1546]: "Дело Розенбергов: Предатели или жертвы Холодной войны? / Уроки истории @MINAEVLIVE"
+          - generic [ref=e1547]:
+            - generic [ref=e1548]: Общество
+            - button "отметить" [ref=e1549]
+        - generic [ref=e1556] [cursor=pointer]:
+          - generic [ref=e1558]: После Сталина / Как делили власть Берия, Маленков и Хрущев / Уроки истории / МИНАЕВ
+          - generic [ref=e1559]:
+            - generic [ref=e1560]: Общество
+            - button "отметить" [ref=e1561]
+        - generic [ref=e1568] [cursor=pointer]:
+          - generic [ref=e1570]: "Альберт Эйнштейн: Гений, изменивший XX век / Личности @MINAEVLIVE"
+          - generic [ref=e1571]:
+            - generic [ref=e1572]: Политика
+            - button "отметить" [ref=e1573]
+        - generic [ref=e1580] [cursor=pointer]:
+          - generic [ref=e1582]: Оттепель / Уроки Истории / МИНАЕВ
+          - generic [ref=e1583]:
+            - generic [ref=e1584]: Общество
+            - button "отметить" [ref=e1585]
+        - generic [ref=e1592] [cursor=pointer]:
+          - generic [ref=e1594]: "Куба после революции #экономика #история #образование #санкции #куба #сша"
+          - generic [ref=e1595]:
+            - generic [ref=e1596]: Политика
+            - button "отметить" [ref=e1597]
+        - generic [ref=e1604] [cursor=pointer]:
+          - generic [ref=e1606]: Че Гевара / Команданте Кубинской революции / Личности / МИНАЕВ
+          - generic [ref=e1607]:
+            - generic [ref=e1608]: Политика
+            - button "отметить" [ref=e1609]
+        - generic [ref=e1616] [cursor=pointer]:
+          - generic [ref=e1618]: ПЕРЕВАЛ ДЯТЛОВА / Что случилось с группой туристов? / Уроки истории / @MINAEVLIVE
+          - generic [ref=e1619]:
+            - generic [ref=e1620]: Общество
+            - button "отметить" [ref=e1621]
+        - generic [ref=e1628] [cursor=pointer]:
+          - generic [ref=e1630]: Что случилось с группой Дятлова? Правда и Мифы Перевала
+          - generic [ref=e1631]:
+            - generic [ref=e1632]: Общество
+            - button "отметить" [ref=e1633]
+        - generic [ref=e1640] [cursor=pointer]:
+          - generic [ref=e1642]: Самый опасный разведчик КГБ / Уроки истории / МИНАЕВ
+          - generic [ref=e1643]:
+            - generic [ref=e1644]: Войны
+            - button "отметить" [ref=e1645]
+        - generic [ref=e1652] [cursor=pointer]:
+          - generic [ref=e1654]: "Стиль 60-х: Как одевались в СССР в эпоху «оттепели» / ДОЛЕЦКАЯ / @MINAEVLIVE"
+          - generic [ref=e1655]:
+            - generic [ref=e1656]: Общество
+            - button "отметить" [ref=e1657]
+        - generic [ref=e1664] [cursor=pointer]:
+          - generic [ref=e1666]: Оппенгеймер против Курчатова. Ядерная гонка века | ФАЙБ
+          - generic [ref=e1667]:
+            - generic [ref=e1668]: Общество
+            - button "отметить" [ref=e1669]
+        - generic [ref=e1676] [cursor=pointer]:
+          - generic [ref=e1678]: "Сальвадор Дали: Как гений сюрреализма превратил искусство в шоу-бизнес / ЛИЧНОСТИ / @MINAEVLIVE"
+          - generic [ref=e1679]:
+            - generic [ref=e1680]: Общество
+            - button "отметить" [ref=e1681]
+        - generic [ref=e1688] [cursor=pointer]:
+          - generic [ref=e1690]: "ЭНДИ УОРХОЛ: Пули над Манхэттеном / Истории кумиров / @MINAEVLIVE"
+          - generic [ref=e1691]:
+            - generic [ref=e1692]: Общество
+            - button "отметить" [ref=e1693]
+        - generic [ref=e1700] [cursor=pointer]:
+          - generic [ref=e1702]: История НАТО
+          - generic [ref=e1703]:
+            - generic [ref=e1704]: Общество
+            - button "отметить" [ref=e1705]
+        - generic [ref=e1712] [cursor=pointer]:
+          - generic [ref=e1714]: Студенты прорыли Тоннель, чтобы сбежать из страны
+          - generic [ref=e1715]:
+            - generic [ref=e1716]: Общество
+            - button "отметить" [ref=e1717]
+        - generic [ref=e1724] [cursor=pointer]:
+          - generic [ref=e1726]: Что скрывал ГАГАРИН? Реальная история Первого человека в Космосе
+          - generic [ref=e1727]:
+            - generic [ref=e1728]: Общество
+            - button "отметить" [ref=e1729]
+        - generic [ref=e1736] [cursor=pointer]:
+          - generic [ref=e1738]: Гагарин / Как один полет изменил весь мир / Личности / @MINAEVLIVE
+          - generic [ref=e1739]:
+            - generic [ref=e1740]: Общество
+            - button "отметить" [ref=e1741]
+        - generic [ref=e1748] [cursor=pointer]:
+          - generic [ref=e1750]: Шпионы в ГДР
+          - generic [ref=e1751]:
+            - generic [ref=e1752]: Войны
+            - button "отметить" [ref=e1753]
+        - generic [ref=e1760] [cursor=pointer]:
+          - generic [ref=e1762]: Как разделили Берлин
+          - generic [ref=e1763]:
+            - generic [ref=e1764]: Общество
+            - button "отметить" [ref=e1765]
+        - generic [ref=e1772] [cursor=pointer]:
+          - generic [ref=e1774]: Карибский кризис / Холодная война / Уроки истории / МИНАЕВ
+          - generic [ref=e1775]:
+            - generic [ref=e1776]: Политика
+            - button "отметить" [ref=e1777]
+        - generic [ref=e1784] [cursor=pointer]:
+          - generic [ref=e1786]: Самый громкий побег 20го века. Тайна беглецов из Алькатраса
+          - generic [ref=e1787]:
+            - generic [ref=e1788]: Общество
+            - button "отметить" [ref=e1789]
+        - generic [ref=e1796] [cursor=pointer]:
+          - generic [ref=e1798]: "МОСГАЗ: Самый известный маньяк после Чикатило / Серийный номер 19 / МИНАЕВ"
+          - generic [ref=e1799]:
+            - generic [ref=e1800]: Общество
+            - button "отметить" [ref=e1801]
+        - generic [ref=e1808] [cursor=pointer]:
+          - generic [ref=e1810]: "МЭРИЛИН МОНРО: Как Джон Кеннеди связан с убийством актрисы? / Истории кумиров / @MINAEVLIVE"
+          - generic [ref=e1811]:
+            - generic [ref=e1812]: Общество
+            - button "отметить" [ref=e1813]
+        - generic [ref=e1820] [cursor=pointer]:
+          - generic [ref=e1822]: Самый ценный Шпион КГБ. Его не могли раскрыть 30 лет
+          - generic [ref=e1823]:
+            - generic [ref=e1824]: Войны
+            - button "отметить" [ref=e1825]
+        - generic [ref=e1832] [cursor=pointer]:
+          - generic [ref=e1834]: Гонка вооружений СССР и США / Холодная война / Уроки истории / МИНАЕВ
+          - generic [ref=e1835]:
+            - generic [ref=e1836]: Войны
+            - button "отметить" [ref=e1837]
+        - generic [ref=e1844] [cursor=pointer]:
+          - generic [ref=e1846]: "Холодная война: Как бывшие союзники стали врагами / Уроки истории / МИНАЕВ"
+          - generic [ref=e1847]:
+            - generic [ref=e1848]: Войны
+            - button "отметить" [ref=e1849]
+        - generic [ref=e1856] [cursor=pointer]:
+          - generic [ref=e1858]: "Холодная война в Египте #история #экономика #ссср #сша"
+          - generic [ref=e1859]:
+            - generic [ref=e1860]: Войны
+            - button "отметить" [ref=e1861]
+        - generic [ref=e1868] [cursor=pointer]:
+          - generic [ref=e1870]: Кто «убрал» Кеннеди? Расследование тайны века
+          - generic [ref=e1871]:
+            - generic [ref=e1872]: Общество
+            - button "отметить" [ref=e1873]
+        - generic [ref=e1880] [cursor=pointer]:
+          - generic [ref=e1882]: "Кеннеди: выстрелы, изменившие историю | ФАЙБ"
+          - generic [ref=e1883]:
+            - generic [ref=e1884]: Общество
+            - button "отметить" [ref=e1885]
+        - generic [ref=e1892] [cursor=pointer]:
+          - generic [ref=e1894]: Тёмная сторона комиксов. Скрытая пропаганда | ФАЙБ
+          - generic [ref=e1895]:
+            - generic [ref=e1896]: Войны
+            - button "отметить" [ref=e1897]
+        - generic [ref=e1904] [cursor=pointer]:
+          - generic [ref=e1906]: Убийство Джона Кеннеди / Кто и зачем убил президента США? / Уроки истории / МИНАЕВ
+          - generic [ref=e1907]:
+            - generic [ref=e1908]: Общество
+            - button "отметить" [ref=e1909]
+        - generic [ref=e1916] [cursor=pointer]:
+          - generic [ref=e1918]: Его искали 40 лет | История Великого ограбления поезда
+          - generic [ref=e1919]:
+            - generic [ref=e1920]: Общество
+            - button "отметить" [ref=e1921]
+        - generic [ref=e1928] [cursor=pointer]:
+          - generic [ref=e1930]: Главный заговор 20 века. Как уничтожили Хрущева | ФАЙБ
+          - generic [ref=e1931]:
+            - generic [ref=e1932]: Общество
+            - button "отметить" [ref=e1933]
+        - generic [ref=e1940] [cursor=pointer]:
+          - generic [ref=e1942]: СИНГАПУР. Диктатура, которая вам понравится | ФАЙБ
+          - generic [ref=e1943]:
+            - generic [ref=e1944]: Общество
+            - button "отметить" [ref=e1945]
+        - generic [ref=e1952] [cursor=pointer]:
+          - generic [ref=e1954]: Борьба на выживание / Холодная война / Уроки истории / МИНАЕВ
+          - generic [ref=e1955]:
+            - generic [ref=e1956]: Войны
+            - button "отметить" [ref=e1957]
+        - generic [ref=e1964] [cursor=pointer]:
+          - generic [ref=e1966]: "ФРЭНК СИНАТРА: Главный связной итальянской мафии / Истории кумиров / @MINAEVLIVE"
+          - generic [ref=e1967]:
+            - generic [ref=e1968]: Общество
+            - button "отметить" [ref=e1969]
+        - generic [ref=e1976] [cursor=pointer]:
+          - generic [ref=e1978]: Самый безумный диктатор. Голод, революция, Китай. Катастрофа Мао Цзэдуна | ФАЙБ
+          - generic [ref=e1979]:
+            - generic [ref=e1980]: Политика
+            - button "отметить" [ref=e1981]
+        - generic [ref=e1988] [cursor=pointer]:
+          - generic [ref=e1990]: Побег Агента КГБ, который скрывали 25 лет
+          - generic [ref=e1991]:
+            - generic [ref=e1992]: Общество
+            - button "отметить" [ref=e1993]
+        - generic [ref=e2000] [cursor=pointer]:
+          - generic [ref=e2002]: Вьетнамская война / История позора США во Вьетнаме / Уроки истории / МИНАЕВ
+          - generic [ref=e2003]:
+            - generic [ref=e2004]: Войны
+            - button "отметить" [ref=e2005]
+        - generic [ref=e2012] [cursor=pointer]:
+          - generic [ref=e2014]: Как американцы похитили Ядерную Подлодку СССР. Самая отчаянная операция ЦРУ
+          - generic [ref=e2015]:
+            - generic [ref=e2016]: Общество
+            - button "отметить" [ref=e2017]
+        - generic [ref=e2024] [cursor=pointer]:
+          - generic [ref=e2026]: Подросток совершил невозможный побег
+          - generic [ref=e2027]:
+            - generic [ref=e2028]: Общество
+            - button "отметить" [ref=e2029]
+        - generic [ref=e2036] [cursor=pointer]:
+          - generic [ref=e2038]: Он держал в страхе всю Америку | Реальная история "Зодиака"
+          - generic [ref=e2039]:
+            - generic [ref=e2040]: Общество
+            - button "отметить" [ref=e2041]
+        - generic [ref=e2048] [cursor=pointer]:
+          - generic [ref=e2050]: Ирландская республиканская армия / ИРА / Ирландия против Англии / Уроки истории / МИНАЕВ
+          - generic [ref=e2051]:
+            - generic [ref=e2052]: Общество
+            - button "отметить" [ref=e2053]
+        - generic [ref=e2060] [cursor=pointer]:
+          - generic [ref=e2062]: "Сделка, о которой вы не знали #экономика #история #ссср #германия #газ"
+          - generic [ref=e2063]:
+            - generic [ref=e2064]: Общество
+            - button "отметить" [ref=e2065]
+        - generic [ref=e2072] [cursor=pointer]:
+          - generic [ref=e2074]: Владимир Высоцкий / Личности / МИНАЕВ
+          - generic [ref=e2075]:
+            - generic [ref=e2076]: Общество
+            - button "отметить" [ref=e2077]
+        - generic [ref=e2084] [cursor=pointer]:
+          - generic [ref=e2086]: "RAF: Ужас Европы / Фракция Красной армии / Уроки истории / МИНАЕВ"
+          - generic [ref=e2087]:
+            - generic [ref=e2088]: Общество
+            - button "отметить" [ref=e2089]
+        - generic [ref=e2096] [cursor=pointer]:
+          - generic [ref=e2098]: "Гетти: Проклятые деньги самого скупого миллиардера в истории / Истории миллиардов @MINAEVLIVE"
+          - generic [ref=e2099]:
+            - generic [ref=e2100]: Общество
+            - button "отметить" [ref=e2101]
+        - generic [ref=e2108] [cursor=pointer]:
+          - generic [ref=e2110]: "Как в СССР появился газ #экономика #история #газ #газпром"
+          - generic [ref=e2111]:
+            - generic [ref=e2112]: Общество
+            - button "отметить" [ref=e2113]
+        - generic [ref=e2120] [cursor=pointer]:
+          - generic [ref=e2122]: Самое загадочное исчезновение | Дело Ди Би Купера
+          - generic [ref=e2123]:
+            - generic [ref=e2124]: Общество
+            - button "отметить" [ref=e2125]
+        - generic [ref=e2132] [cursor=pointer]:
+          - generic [ref=e2134]: "Бобби Фишер: Опасные игры разума и война с ФБР / Истории кумиров / МИНАЕВ"
+          - generic [ref=e2135]:
+            - generic [ref=e2136]: Общество
+            - button "отметить" [ref=e2137]
+        - generic [ref=e2144] [cursor=pointer]:
+          - generic [ref=e2146]: Президентский скандал / Почему Ричарду Никсону пришлось уйти в отставку? / Уроки истории / МИНАЕВ
+          - generic [ref=e2147]:
+            - generic [ref=e2148]: Общество
+            - button "отметить" [ref=e2149]
+        - generic [ref=e2156] [cursor=pointer]:
+          - generic [ref=e2158]: "Говард Хьюз: Миллиардер-затворник или безумный гений, изменивший авиацию? / Личности @MINAEVLIVE"
+          - generic [ref=e2159]:
+            - generic [ref=e2160]: Общество
+            - button "отметить" [ref=e2161]
+        - generic [ref=e2168] [cursor=pointer]:
+          - generic [ref=e2170]: Самая Успешная Шпионская операция ЦРУ в Москве
+          - generic [ref=e2171]:
+            - generic [ref=e2172]: Войны
+            - button "отметить" [ref=e2173]
+        - generic [ref=e2180] [cursor=pointer]:
+          - generic [ref=e2182]: "Картель Пабло Эскобара: Колумбия, криминал и нарковойны / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e2183]:
+            - generic [ref=e2184]: Войны
+            - button "отметить" [ref=e2185]
+        - generic [ref=e2192] [cursor=pointer]:
+          - generic [ref=e2194]: ПАНЕЛЬКИ. Кем нас сделали многоэтажки? | ФАЙБ
+          - generic [ref=e2195]:
+            - generic [ref=e2196]: Общество
+            - button "отметить" [ref=e2197]
+        - generic [ref=e2204] [cursor=pointer]:
+          - generic [ref=e2206]: "Санкции холодной войны #экономика #история #санкции #ссср #сша"
+          - generic [ref=e2207]:
+            - generic [ref=e2208]: Войны
+            - button "отметить" [ref=e2209]
+        - generic [ref=e2216] [cursor=pointer]:
+          - generic [ref=e2218]: "Республика БАМ: История Байкало-Амурской магистрали / Уроки истории / МИНАЕВ"
+          - generic [ref=e2219]:
+            - generic [ref=e2220]: Общество
+            - button "отметить" [ref=e2221]
+        - generic [ref=e2228] [cursor=pointer]:
+          - generic [ref=e2230]: Проблемы с машинами в СССР
+          - generic [ref=e2231]:
+            - generic [ref=e2232]: Общество
+            - button "отметить" [ref=e2233]
+        - generic [ref=e2240] [cursor=pointer]:
+          - generic [ref=e2242]: Им врали 30 лет. Страшная правда Двойников из Америки
+          - generic [ref=e2243]:
+            - generic [ref=e2244]: Общество
+            - button "отметить" [ref=e2245]
+        - generic [ref=e2252] [cursor=pointer]:
+          - generic [ref=e2254]: Афганская война / Почему СССР ввёл войска в Афганистан / Уроки истории / МИНАЕВ
+          - generic [ref=e2255]:
+            - generic [ref=e2256]: Войны
+            - button "отметить" [ref=e2257]
+        - generic [ref=e2264] [cursor=pointer]:
+          - generic [ref=e2266]: "ВИТЕБСКИЙ ДУШИТЕЛЬ: История жуткой подмены / СЕРИЙНЫЙ НОМЕР 5 / @MINAEVLIVE"
+          - generic [ref=e2267]:
+            - generic [ref=e2268]: Общество
+            - button "отметить" [ref=e2269]
+        - generic [ref=e2276] [cursor=pointer]:
+          - generic [ref=e2278]: Сексуальная революция в советском кино | ФАЙБ
+          - generic [ref=e2279]:
+            - generic [ref=e2280]: Общество
+            - button "отметить" [ref=e2281]
+        - generic [ref=e2288] [cursor=pointer]:
+          - generic [ref=e2290]: Как серийный убийца едва не начал расовую войну в США | ФАЙБ
+          - generic [ref=e2291]:
+            - generic [ref=e2292]: Общество
+            - button "отметить" [ref=e2293]
+        - generic [ref=e2300] [cursor=pointer]:
+          - generic [ref=e2302]: "ГЕЙСИ: Как клоун стал убийцей и почему это сходило с рук / СЕРИЙНЫЙ НОМЕР 12 @MINAEVLIVE"
+          - generic [ref=e2303]:
+            - generic [ref=e2304]: Общество
+            - button "отметить" [ref=e2305]
+        - generic [ref=e2312] [cursor=pointer]:
+          - generic [ref=e2314]: "1980-2010-е: Олимпиада-80, Большой теннис в России, FIFA-2018 / История Московского спорта / МИНАЕВ"
+          - generic [ref=e2315]:
+            - generic [ref=e2316]: Общество
+            - button "отметить" [ref=e2317]
+        - generic [ref=e2324] [cursor=pointer]:
+          - generic [ref=e2326]: "БАНДИ: Из политика в маньяки / СЕРИЙНЫЙ НОМЕР 4 / @MINAEVLIVE"
+          - generic [ref=e2327]:
+            - generic [ref=e2328]: Общество
+            - button "отметить" [ref=e2329]
+        - generic [ref=e2336] [cursor=pointer]:
+          - generic [ref=e2338]: Тэтчер / Гениальный политик или худший премьер-министр Великобритании? / Личности / @MINAEVLIVE
+          - generic [ref=e2339]:
+            - generic [ref=e2340]: Общество
+            - button "отметить" [ref=e2341]
+        - generic [ref=e2348] [cursor=pointer]:
+          - generic [ref=e2350]: Британский Агент внутри КГБ. Главная шпионская история 20го века
+          - generic [ref=e2351]:
+            - generic [ref=e2352]: Общество
+            - button "отметить" [ref=e2353]
+        - generic [ref=e2360] [cursor=pointer]:
+          - generic [ref=e2362]: Восьмидесятые – лучшее десятилетие 20 века | ФАЙБ
+          - generic [ref=e2363]:
+            - generic [ref=e2364]: Общество
+            - button "отметить" [ref=e2365]
+        - generic [ref=e2372] [cursor=pointer]:
+          - generic [ref=e2374]: Заложники в Бейруте / Кто похитил советских дипломатов? / Уроки истории / МИНАЕВ
+          - generic [ref=e2375]:
+            - generic [ref=e2376]: Общество
+            - button "отметить" [ref=e2377]
+        - generic [ref=e2384] [cursor=pointer]:
+          - generic [ref=e2386]: Почему ТИТАНИК не могли найти 70 лет?
+          - generic [ref=e2387]:
+            - generic [ref=e2388]: Общество
+            - button "отметить" [ref=e2389]
+        - generic [ref=e2396] [cursor=pointer]:
+          - generic [ref=e2398]: Перестройка / Уроки истории / МИНАЕВ
+          - generic [ref=e2399]:
+            - generic [ref=e2400]: Политика
+            - button "отметить" [ref=e2401]
+        - generic [ref=e2408] [cursor=pointer]:
+          - generic [ref=e2410]: "Это Япония в 80-е #экономика #история #япония"
+          - generic [ref=e2411]:
+            - generic [ref=e2412]: Общество
+            - button "отметить" [ref=e2413]
+        - generic [ref=e2420] [cursor=pointer]:
+          - generic [ref=e2422]: Тайная операция ЦРУ / Скандал ИРАН-КОНТРАС / Уроки истории / МИНАЕВ
+          - generic [ref=e2423]:
+            - generic [ref=e2424]: Общество
+            - button "отметить" [ref=e2425]
+        - generic [ref=e2432] [cursor=pointer]:
+          - generic [ref=e2434]: "Чернобыль: Трагедия, изменившая мир / Уроки истории @MINAEVLIVE"
+          - generic [ref=e2435]:
+            - generic [ref=e2436]: Общество
+            - button "отметить" [ref=e2437]
+        - generic [ref=e2444] [cursor=pointer]:
+          - generic [ref=e2446]: "ВИКТОР ЦОЙ: Главный рок-идол России / Истории кумиров @MINAEVLIVE"
+          - generic [ref=e2447]:
+            - generic [ref=e2448]: Политика
+            - button "отметить" [ref=e2449]
+        - generic [ref=e2456] [cursor=pointer]:
+          - generic [ref=e2458]: Матиас Руст / Полёт над Кремлём / Исторический детектив / МИНАЕВ
+          - generic [ref=e2459]:
+            - generic [ref=e2460]: Общество
+            - button "отметить" [ref=e2461]
+        - generic [ref=e2468] [cursor=pointer]:
+          - generic [ref=e2470]: "БРАТЬЯ МЕНЕНДЕС: Почему этих извергов обожают и могут скоро освободить? / Серийный номер 16 / МИНАЕВ"
+          - generic [ref=e2471]:
+            - generic [ref=e2472]: Общество
+            - button "отметить" [ref=e2473]
+        - generic [ref=e2480] [cursor=pointer]:
+          - generic [ref=e2482]: Роль Беларуси в СССР
+          - generic [ref=e2483]:
+            - generic [ref=e2484]: Общество
+            - button "отметить" [ref=e2485]
+        - generic [ref=e2492] [cursor=pointer]:
+          - generic [ref=e2494]: Берлинская стена / Разделение на ГДР и ФРГ / Уроки истории / Минаев
+          - generic [ref=e2495]:
+            - generic [ref=e2496]: Общество
+            - button "отметить" [ref=e2497]
+        - generic [ref=e2504] [cursor=pointer]:
+          - generic [ref=e2506]: Как США прикрываются войной с картелями / Уроки истории / МИНАЕВ
+          - generic [ref=e2507]:
+            - generic [ref=e2508]: Общество
+            - button "отметить" [ref=e2509]
+        - generic [ref=e2516] [cursor=pointer]:
+          - generic [ref=e2518]: Почему Германия до сих пор разделена?
+          - generic [ref=e2519]:
+            - generic [ref=e2520]: Войны
+            - button "отметить" [ref=e2521]
+        - generic [ref=e2528] [cursor=pointer]:
+          - generic [ref=e2530]: Настоящий Джеймс Бонд. Невыдуманный агент, о котором вы не знали | ФАЙБ
+          - generic [ref=e2531]:
+            - generic [ref=e2532]: Общество
+            - button "отметить" [ref=e2533]
+        - generic [ref=e2540] [cursor=pointer]:
+          - generic [ref=e2542]: Фарца / Бандиты 90-х / Часть 2 / МИНАЕВ
+          - generic [ref=e2543]:
+            - generic [ref=e2544]: Общество
+            - button "отметить" [ref=e2545]
+        - generic [ref=e2552] [cursor=pointer]:
+          - generic [ref=e2554]: "ВАНГА: Проект спецслужб или феномен века? / Личности / МИНАЕВ"
+          - generic [ref=e2555]:
+            - generic [ref=e2556]: Общество
+            - button "отметить" [ref=e2557]
+        - generic [ref=e2564] [cursor=pointer]:
+          - generic [ref=e2566]: Фарца / Как зарабатывали фарцовщики в СССР ? / Часть 1 / МИНАЕВ
+          - generic [ref=e2567]:
+            - generic [ref=e2568]: Общество
+            - button "отметить" [ref=e2569]
+        - generic [ref=e2576] [cursor=pointer]:
+          - generic [ref=e2578]: Гибель фондовой биржи России
+          - generic [ref=e2579]:
+            - generic [ref=e2580]: Общество
+            - button "отметить" [ref=e2581]
+        - generic [ref=e2588] [cursor=pointer]:
+          - generic [ref=e2590]: Зачем США вторглись в Ирак в 1991 году? / Операция «Буря в пустыне» / Уроки истории / МИНАЕВ
+          - generic [ref=e2591]:
+            - generic [ref=e2592]: Войны
+            - button "отметить" [ref=e2593]
+        - generic [ref=e2600] [cursor=pointer]:
+          - generic [ref=e2602]: Августовский Путч 1991 / Провал ГКЧП / Уроки истории / МИНАЕВ
+          - generic [ref=e2603]:
+            - generic [ref=e2604]: Общество
+            - button "отметить" [ref=e2605]
+        - generic [ref=e2612] [cursor=pointer]:
+          - generic [ref=e2614]: Распад СССР / Союзный договор / Уроки истории @MINAEVLIVE
+          - generic [ref=e2615]:
+            - generic [ref=e2616]: Политика
+            - button "отметить" [ref=e2617]
+        - generic [ref=e2624] [cursor=pointer]:
+          - generic [ref=e2626]: Югославия / Распад Югославии / Уроки истории / МИНАЕВ
+          - generic [ref=e2627]:
+            - generic [ref=e2628]: Войны
+            - button "отметить" [ref=e2629]
+        - generic [ref=e2636] [cursor=pointer]:
+          - generic [ref=e2638]: Бандитские 90-е. История, которая вас удивит | ФАЙБ
+          - generic [ref=e2639]:
+            - generic [ref=e2640]: Общество
+            - button "отметить" [ref=e2641]
+        - generic [ref=e2648] [cursor=pointer]:
+          - generic [ref=e2650]: "ЧИКАТИЛО: Ошибки и загадки в деле главного маньяка СССР / СЕРИЙНЫЙ НОМЕР 1 / @MINAEVLIVE"
+          - generic [ref=e2651]:
+            - generic [ref=e2652]: Общество
+            - button "отметить" [ref=e2653]
+        - generic [ref=e2660] [cursor=pointer]:
+          - generic [ref=e2662]: Конституция при Ленине, Сталине, Брежневе и Ельцине / История Конституции / Уроки Истории /Минаев
+          - generic [ref=e2663]:
+            - generic [ref=e2664]: Политика
+            - button "отметить" [ref=e2665]
+        - generic [ref=e2672] [cursor=pointer]:
+          - generic [ref=e2674]: Бойня в Техасе / Сектанты против агентов ФБР / Уроки истории / МИНАЕВ
+          - generic [ref=e2675]:
+            - generic [ref=e2676]: Общество
+            - button "отметить" [ref=e2677]
+        - generic [ref=e2684] [cursor=pointer]:
+          - generic [ref=e2686]: Расстрел Белого дома / Путч 1993/ Уроки истории / МИНАЕВ
+          - generic [ref=e2687]:
+            - generic [ref=e2688]: Общество
+            - button "отметить" [ref=e2689]
+        - generic [ref=e2696] [cursor=pointer]:
+          - generic [ref=e2698]: "КУРТ КОБЕЙН: Взлёт и трагедия солиста группы Nirvana / Истории кумиров / МИНАЕВ"
+          - generic [ref=e2699]:
+            - generic [ref=e2700]: Общество
+            - button "отметить" [ref=e2701]
+        - generic [ref=e2708] [cursor=pointer]:
+          - generic [ref=e2710]: Великие аферисты / От Графа Калиостро до МММ Сергея Мавроди / Уроки истории / МИНАЕВ
+          - generic [ref=e2711]:
+            - generic [ref=e2712]: Общество
+            - button "отметить" [ref=e2713]
+        - generic [ref=e2720] [cursor=pointer]:
+          - generic [ref=e2722]: Девяностые. Самый личный выпуск | ФАЙБ
+          - generic [ref=e2723]:
+            - generic [ref=e2724]: Общество
+            - button "отметить" [ref=e2725]
+        - generic [ref=e2732] [cursor=pointer]:
+          - generic [ref=e2734]: Худшая Россия, которую вы забыли. Девяностые
+          - generic [ref=e2735]:
+            - generic [ref=e2736]: Общество
+            - button "отметить" [ref=e2737]
+        - generic [ref=e2744] [cursor=pointer]:
+          - generic [ref=e2746]: "Эпоха Владислава Листьева: Телевидение 90-х, криминал и жестокое убийство @MINAEVLIVE"
+          - generic [ref=e2747]:
+            - generic [ref=e2748]: Общество
+            - button "отметить" [ref=e2749]
+        - generic [ref=e2756] [cursor=pointer]:
+          - generic [ref=e2758]: Мумий Тролль. Морская / Девяностые / МИНАЕВ
+          - generic [ref=e2759]:
+            - generic [ref=e2760]: Общество
+            - button "отметить" [ref=e2761]
+        - generic [ref=e2768] [cursor=pointer]:
+          - generic [ref=e2770]: Девяностые. Выборы 1996 г. Часть 1 / МИНАЕВ
+          - generic [ref=e2771]:
+            - generic [ref=e2772]: Общество
+            - button "отметить" [ref=e2773]
+        - generic [ref=e2780] [cursor=pointer]:
+          - generic [ref=e2782]: Философ-убийца. Почему его не могли поймать 17 лет | ФАЙБ
+          - generic [ref=e2783]:
+            - generic [ref=e2784]: Общество
+            - button "отметить" [ref=e2785]
+        - generic [ref=e2792] [cursor=pointer]:
+          - generic [ref=e2794]: "ДЖАННИ ВЕРСАЧЕ: Самое гламурное убийство / Истории кумиров / МИНАЕВ"
+          - generic [ref=e2795]:
+            - generic [ref=e2796]: Общество
+            - button "отметить" [ref=e2797]
+        - generic [ref=e2804] [cursor=pointer]:
+          - generic [ref=e2806]: Принцесса Диана / Королева людских сердец / Личности / МИНАЕВ
+          - generic [ref=e2807]:
+            - generic [ref=e2808]: Общество
+            - button "отметить" [ref=e2809]
+        - generic [ref=e2816] [cursor=pointer]:
+          - generic [ref=e2818]: "Грандиозный скандал 90-х: БИЛЛ КЛИНТОН и МОНИКА ЛЕВИНСКИ / Уроки истории / @MINAEVLIVE"
+          - generic [ref=e2819]:
+            - generic [ref=e2820]: Общество
+            - button "отметить" [ref=e2821]
+        - generic [ref=e2828] [cursor=pointer]:
+          - generic [ref=e2830]: "Дефолт 1998 года #экономика #история #россия"
+          - generic [ref=e2831]:
+            - generic [ref=e2832]: Общество
+            - button "отметить" [ref=e2833]
+        - generic [ref=e2840] [cursor=pointer]:
+          - generic [ref=e2842]: Реальные причины распада Югославии | ФАЙБ
+          - generic [ref=e2843]:
+            - generic [ref=e2844]: Политика
+            - button "отметить" [ref=e2845]
+      - generic [ref=e2849]:
+        - generic [ref=e2851] [cursor=pointer]: Рубеж веков
+        - generic [ref=e2853] [cursor=pointer]: Первая мировая
+        - generic [ref=e2855] [cursor=pointer]: Межвоенный период
+        - generic [ref=e2857] [cursor=pointer]: Вторая мировая
+        - generic [ref=e2859] [cursor=pointer]: Холодная война
+        - generic [ref=e2861] [cursor=pointer]: Постсоветская эпоха
+        - generic [ref=e2864]: "1900"
+        - generic [ref=e2867]: "1910"
+        - generic [ref=e2870]: "1920"
+        - generic [ref=e2873]: "1930"
+        - generic [ref=e2876]: "1940"
+        - generic [ref=e2879]: "1950"
+        - generic [ref=e2882]: "1960"
+        - generic [ref=e2885]: "1970"
+        - generic [ref=e2888]: "1980"
+        - generic [ref=e2891]: "1990"
+        - generic [ref=e2894]: "2000"
+        - generic "1900 — Агенты царской безопасности / Покушения на Александра II /Уроки истории / @MINAEVLIVE" [ref=e2896] [cursor=pointer]
+        - generic "1900 — Богатейший махинатор Империи. Предать всех и проиграть всё | ФАЙБ" [ref=e2897] [cursor=pointer]
+        - 'generic "1900 — САЛТЫЧИХА: Как маньячка-дворянка творила ужас в центре Москвы / СЕРИЙНЫЙ НОМЕР 11 / @MINAEVLIVE" [ref=e2898] [cursor=pointer]'
+        - generic "1900 — РОМАНОВЫ. Расцвет и катастрофа богатейшей династии мира | ФАЙБ" [ref=e2899] [cursor=pointer]
+        - generic "1900 — Иллюминаты. Мировое правительство. Масоны. Разбор мифа | ФАЙБ" [ref=e2900] [cursor=pointer]
+        - generic "1905 — Революция 1905 / Первая русская революция / Уроки истории / МИНАЕВ" [ref=e2901] [cursor=pointer]
+        - generic "1905 — Русско-японская война 1904-1905 / Почему Россия проиграла Японии? / Уроки истории / МИНАЕВ" [ref=e2902] [cursor=pointer]
+        - generic "1911 — Столыпин / Реформы и служение Николаю II / Уроки истории / МИНАЕВ" [ref=e2903] [cursor=pointer]
+        - 'generic "1912 — Титаник: История крупнейшей морской катастрофы XX века / Уроки истории / @MINAEVLIVE" [ref=e2904] [cursor=pointer]'
+        - 'generic "1914 — НЕФТЬ: История войны / Простовещи / МИНАЕВ" [ref=e2905] [cursor=pointer]'
+        - generic "1914 — Пропавшие в Антарктиде. Невероятная история выживания экспедиции Шеклтона" [ref=e2906] [cursor=pointer]
+        - generic "1914 — Как детские сказки привели к Первой Мировой | ФАЙБ" [ref=e2907] [cursor=pointer]
+        - 'generic "1914 — Аньелли: Ювентус, FIAT и скандальная дружба с Муссолини / Истории миллиардов @MINAEVLIVE" [ref=e2908] [cursor=pointer]'
+        - generic "1914 — Первая мировая война / Причины, события и итоги Первой мировой / Уроки истории / МИНАЕВ" [ref=e2909] [cursor=pointer]
+        - generic "1916 — РАСПУТИН. Загадка последнего старца империи | ФАЙБ" [ref=e2910] [cursor=pointer]
+        - generic "1916 — Атака мертвецов / Оборона крепости Осовец / Уроки истории / МИНАЕВ" [ref=e2911] [cursor=pointer]
+        - generic "1917 — ЮСУПОВЫ. Проклятие богатейшей семьи Российской империи | ФАЙБ" [ref=e2912] [cursor=pointer]
+        - generic "1917 — Григорий Распутин / Последние годы Романовых / Уроки истории / МИНАЕВ" [ref=e2913] [cursor=pointer]
+        - generic "1917 — Октябрьская революция / МИНАЕВ" [ref=e2914] [cursor=pointer]
+        - generic "1917 — Как коммунисты устроили революцию в России?" [ref=e2915] [cursor=pointer]
+        - generic "1917 — Февральская революция / Отречение Романовых и ошибки Николая II / Уроки истории /МИНАЕВ" [ref=e2916] [cursor=pointer]
+        - generic "1917 — Самый могущественный тайный орден. От убийства царя до завоевания космоса | ФАЙБ" [ref=e2917] [cursor=pointer]
+        - 'generic "1917 — Матильда Кшесинская: Николай II, коррупционные схемы и революция 1917 года / Долецкая / МИНАЕВ" [ref=e2918] [cursor=pointer]'
+        - generic "1917 — Булгаков / Зависимость, мистика и Сталин в жизни Мастера / ЛИЧНОСТИ / @MINAEVLIVE" [ref=e2919] [cursor=pointer]
+        - 'generic "1917 — Мата Хари: Куртизанка или легендарная шпионка Первой мировой войны? / ДОЛЕЦКАЯ / @MINAEVLIVE" [ref=e2920] [cursor=pointer]'
+        - 'generic "1917 — Владимир Ленин: Гений революции или талантливый манипулятор? / Личности @MINAEVLIVE" [ref=e2921] [cursor=pointer]'
+        - generic "1917 — Корниловский мятеж / Как конфликт Керенского и Корнилова помог большевикам / Уроки истории / МИНАЕВ" [ref=e2922] [cursor=pointer]
+        - 'generic "1918 — Александр Колчак: Герой Гражданской войны или кровавый диктатор? / Личности / МИНАЕВ" [ref=e2923] [cursor=pointer]'
+        - generic "1918 — Почему началась Гражданская война в России? / Гражданская война / Часть 1/ Уроки истории / МИНАЕВ" [ref=e2924] [cursor=pointer]
+        - generic "1920 — Страшная Тайна Cветящихся женщин из Америки | Радиевые девушки" [ref=e2925] [cursor=pointer]
+        - generic "1920 — Главный Мошенник в истории" [ref=e2926] [cursor=pointer]
+        - 'generic "1920 — КОМАРОВ: Как ловили первого маньяка СССР и при чём тут Булгаков / СЕРИЙНЫЙ НОМЕР 7 / @MINAEVLIVE" [ref=e2927] [cursor=pointer]'
+        - generic "1920 — Барон Унгерн / Белый офицер или Чингисхан XX века / Личности / МИНАЕВ" [ref=e2928] [cursor=pointer]
+        - generic "1920 — Почему Красная армия победила в Гражданской войне в России? / Уроки истории / МИНАЕВ" [ref=e2929] [cursor=pointer]
+        - 'generic "1921 — Сергей Есенин: Русская страсть Айседоры Дункан / ДОЛЕЦКАЯ / @MINAEVLIVE" [ref=e2930] [cursor=pointer]'
+        - generic "1923 — Государство, породившее Гитлера | ФАЙБ" [ref=e2931] [cursor=pointer]
+        - 'generic "1925 — Деньги Аль Капоне #shorts" [ref=e2932] [cursor=pointer]'
+        - generic "1925 — Люди исчезают 100 лет в поисках Затерянного Города" [ref=e2933] [cursor=pointer]
+        - generic "1925 — Еврейская мафия. Банды Нью-Йорка | ФАЙБ" [ref=e2934] [cursor=pointer]
+        - generic "1925 — МАЯКОВСКИЙ, о котором не расскажут в школе | ФАЙБ" [ref=e2935] [cursor=pointer]
+        - 'generic "1925 — Сергей Есенин: Настоящая история без школьных мифов / Личности / МИНАЕВ" [ref=e2936] [cursor=pointer]'
+        - generic "1925 — 1920-е БЛЕСТЯЩИЙ ДЕБЮТ / История Московского спорта / МИНАЕВ" [ref=e2937] [cursor=pointer]
+        - generic "1928 — Загадочная История Кристин Коллинз. Куда исчез ее сын?" [ref=e2938] [cursor=pointer]
+        - 'generic "1929 — Черный вторник 1929 #экономика #история #сша #кризис" [ref=e2939] [cursor=pointer]'
+        - 'generic "1930 — Юбки после войны #экономика #история #кризис #великаядепрессия" [ref=e2940] [cursor=pointer]'
+        - generic "1930 — Гибель Аль Капоне. От Гангстера №1 до глупого неудачника" [ref=e2941] [cursor=pointer]
+        - 'generic "1930 — Великий экономист #экономика #история #кризис #великаядепрессия" [ref=e2942] [cursor=pointer]'
+        - generic "1930 — Рахманинов / Руки на миллион / Личности / МИНАЕВ" [ref=e2943] [cursor=pointer]
+        - generic "1933 — Иван Бунин / Жизнь в эмиграции, Нобелевская премия и нищета / Личности / МИНАЕВ" [ref=e2944] [cursor=pointer]
+        - generic "1933 — Главный кризис в истории. Великая депрессия США" [ref=e2945] [cursor=pointer]
+        - generic "1933 — Великая Рецессия Америки" [ref=e2946] [cursor=pointer]
+        - 'generic "1934 — Челюскинцы: Как сто человек выживали на льдине в Арктике? @MINAEVLIVE" [ref=e2947] [cursor=pointer]'
+        - generic "1935 — МУССОЛИНИ. Триумф и катастрофа крестного отца фашизма | ФАЙБ" [ref=e2948] [cursor=pointer]
+        - generic "1935 — Бенито Муссолини и история фашизма в Италии / Уроки истории / @MINAEVLIVE" [ref=e2949] [cursor=pointer]
+        - generic "1935 — 1930-е СТАНОВЛЕНИЕ СПАРТАКА / История Московского спорта / МИНАЕВ" [ref=e2950] [cursor=pointer]
+        - 'generic "1936 — Максим Горький: История не для школьной программы / Личности / МИНАЕВ" [ref=e2951] [cursor=pointer]'
+        - generic "1936 — Чарли Чаплин. Реальная история жизни лучшего актера в истории" [ref=e2952] [cursor=pointer]
+        - generic "1937 — Гражданская война в Испании / Почему Сталин помогал Испании / Уроки истории / МИНАЕВ" [ref=e2953] [cursor=pointer]
+        - generic "1937 — Большое интервью со Сталингулагом // Минаев" [ref=e2954] [cursor=pointer]
+        - generic "1937 — Нацистский Титаник / Катастрофа дирижабля «ГИНДЕНБУРГ» / Уроки истории / @MINAEVLIVE" [ref=e2955] [cursor=pointer]
+        - generic "1938 — Политический Макдоналдс. Как идеология изменила мир и нас самих | ФАЙБ" [ref=e2956] [cursor=pointer]
+        - generic "1939 — Мюнхенский сговор / Как началась Вторая мировая война? / Уроки истории / МИНАЕВ LIVE" [ref=e2957] [cursor=pointer]
+        - generic "1940 — Кембриджская пятерка / Как британские аристократы работали на СССР / Уроки истории / МИНАЕВ" [ref=e2958] [cursor=pointer]
+        - 'generic "1940 — Вторая мировая: 1940 / Битва за Британию / Вступление Италии в войну / Уроки истории / @MINAEVLIVE" [ref=e2959] [cursor=pointer]'
+        - generic "1940 — Как Гитлер обманул немцев" [ref=e2960] [cursor=pointer]
+        - generic "1940 — Как нацисты кинули Европу" [ref=e2961] [cursor=pointer]
+        - 'generic "1940 — Вторая мировая война: 1940 / Дюнкерк, падение Франции и Норвегии / Уроки истории / @MINAEVLIVE" [ref=e2962] [cursor=pointer]'
+        - 'generic "1940 — Марлен Дитрих: Взлеты и падения голливудской актрисы / Личности / @MINAEVLIVE" [ref=e2963] [cursor=pointer]'
+        - generic "1940 — Женщины, роскошь, алкоголизм, тюрьма. Неизвестный сын Сталина | ФАЙБ" [ref=e2964] [cursor=pointer]
+        - generic "1940 — Врач, маньяк или мошенник? Кто придумал лоботомию | ФАЙБ" [ref=e2965] [cursor=pointer]
+        - generic "1941 — ТРЕТИЙ РЕЙХ. Пирамида государственного масштаба | ФАЙБ" [ref=e2966] [cursor=pointer]
+        - generic "1941 — БЛОКАДА ЛЕНИНГРАДА / Вторая мировая война / Уроки истории @MINAEVLIVE" [ref=e2967] [cursor=pointer]
+        - generic "1941 — «Мирные» методы Гитлера" [ref=e2968] [cursor=pointer]
+        - generic "1941 — Атака на Перл-Харбор / Почему Япония напала на США / Уроки истории / @MINAEVLIVE" [ref=e2969] [cursor=pointer]
+        - 'generic "1941 — 1941: Битва за Москву / Вторая мировая война / Уроки истории / @MINAEVLIVE" [ref=e2970] [cursor=pointer]'
+        - 'generic "1941 — 1941: Нападение на СССР / Вторая мировая война / Уроки истории / @MINAEVLIVE" [ref=e2971] [cursor=pointer]'
+        - 'generic "1941 — ПАЛАЧ В ЮБКЕ: Как пособница нацистов 30 лет скрывалась от КГБ / Серийный номер 15 @MINAEVLIVE" [ref=e2972] [cursor=pointer]'
+        - generic "1941 — Почему Гитлер не смог захватить весь мир" [ref=e2973] [cursor=pointer]
+        - 'generic "1941 — Рихард Зорге: Как советский супершпион изменил ход Второй Мировой войны / Личности / МИНАЕВ" [ref=e2974] [cursor=pointer]'
+        - 'generic "1942 — 1942: Мидуэй, Битва за Крым и Ржевское Сражение / Вторая мировая война / Уроки истории /@MINAEVLIVE" [ref=e2975] [cursor=pointer]'
+        - generic "1942 — Кто обогатился на мировых войнах?" [ref=e2976] [cursor=pointer]
+        - generic "1942 — BMW и Mercedes / БИТВА БРЕНДОВ" [ref=e2977] [cursor=pointer]
+        - generic "1942 — Аненербе / Чем занималась самая секретная организация Третьего рейха? / Уроки истории / МИНАЕВ" [ref=e2978] [cursor=pointer]
+        - 'generic "1942 — 1942: Битва за Кавказ / Вторая мировая война / Уроки истории / МИНАЕВ LIVE" [ref=e2979] [cursor=pointer]'
+        - generic "1942 — Кто финансировал Третий Рейх? / Запрещенная история Второй мировой / МИНАЕВ" [ref=e2980] [cursor=pointer]
+        - 'generic "1942 — Тайны Банка Ватикана: масоны, итальянская мафия и союз с Муссолини / Уроки истории / @MINAEVLIVE" [ref=e2981] [cursor=pointer]'
+        - generic "1943 — Самая Безумная Секретная операция Второй Мировой" [ref=e2982] [cursor=pointer]
+        - 'generic "1943 — 1943: Крах надежд Гитлера / Вторая мировая война / Уроки истории @MINAEVLIVE" [ref=e2983] [cursor=pointer]'
+        - generic "1943 — Никола Тесла. История большого обмана | ФАЙБ" [ref=e2984] [cursor=pointer]
+        - 'generic "1943 — 1943: Битва за Киев, Тегеранская конференция и война на Тихом океане / Вторая мировая @MINAEVLIVE" [ref=e2985] [cursor=pointer]'
+        - 'generic "1943 — 1943: Курская дуга, Победы на Восточном фронте и Капитуляция Италии @MINAEVLIVE" [ref=e2986] [cursor=pointer]'
+        - generic "1943 — Черчилль / Авантюрист и Герой нации / Личности / МИНАЕВ" [ref=e2987] [cursor=pointer]
+        - 'generic "1944 — ЙОЗЕФ МЕНГЕЛЕ: Нацистский врач-убийца из лагеря Освенцим / СЕРИЙНЫЙ НОМЕР 8 /@MINAEVLIVE" [ref=e2988] [cursor=pointer]'
+        - 'generic "1944 — 1944: Варшавское восстание и зверства Третьего Рейха / Вторая мировая война @MINAEVLIVE" [ref=e2989] [cursor=pointer]'
+        - 'generic "1944 — 1944: Высадка в Нормандии и операция «Багратион» / Вторая мировая война @MINAEVLIVE" [ref=e2990] [cursor=pointer]'
+        - generic "1944 — Пропаганда Геббельса / Вторая мировая война @MINAEVLIVE" [ref=e2991] [cursor=pointer]
+        - generic "1944 — Убить Гитлера / Операция Валькирия / Уроки истории / МИНАЕВ" [ref=e2992] [cursor=pointer]
+        - 'generic "1944 — Генерал де Голль: Герой, ставший диктатором? / Уроки истории / МИНАЕВ" [ref=e2993] [cursor=pointer]'
+        - 'generic "1944 — 1944: Выход к границам СССР / Вторая мировая война / Уроки истории @MINAEVLIVE" [ref=e2994] [cursor=pointer]'
+        - generic "1944 — Как доллар подчинил мир? История обмана" [ref=e2995] [cursor=pointer]
+        - generic "1944 — Убийство Гитлера. Главный провал 20го века" [ref=e2996] [cursor=pointer]
+        - generic "1945 — Мой любимый пропагандист (и Сталина тоже) | ФАЙБ" [ref=e2997] [cursor=pointer]
+        - 'generic "1945 — АТОМНАЯ БОМБАРДИРОВКА: Хиросима и Нагасаки / Уроки истории / МИНАЕВ" [ref=e2998] [cursor=pointer]'
+        - generic "1945 — Почему люди обожают Японию | ФАЙБ" [ref=e2999] [cursor=pointer]
+        - generic "1945 — 1940-е ДНИ ПОБЕД / История Московского спорта / МИНАЕВ" [ref=e3000] [cursor=pointer]
+        - generic "1945 — Нюрнберг / Уроки истории / МИНАЕВ (English subtitles)" [ref=e3001] [cursor=pointer]
+        - generic "1945 — Как появилась Северная и Южная Корея" [ref=e3002] [cursor=pointer]
+        - 'generic "1945 — Вторая мировая война: 1939 / Уроки истории / @MINAEVLIVE" [ref=e3003] [cursor=pointer]'
+        - generic "1945 — Почему главные палачи Третьего Рейха избежали наказания? | ФАЙБ" [ref=e3004] [cursor=pointer]
+        - generic "1945 — Отряд 731 / Японские фабрики смерти / Уроки истории / МИНАЕВ" [ref=e3005] [cursor=pointer]
+        - generic "1945 — Страна-катастрофа. Как Южная Корея пожирает себя" [ref=e3006] [cursor=pointer]
+        - generic "1945 — Юкио Мисима / Последний самурай Японии / Личности / @MINAEVLIVE" [ref=e3007] [cursor=pointer]
+        - generic "1945 — СМЕРШ против немецких агентов / Уроки истории @MINAEVLIVE" [ref=e3008] [cursor=pointer]
+        - generic "1945 — ВИНДЗОРЫ. Самая развратная династия | ФАЙБ" [ref=e3009] [cursor=pointer]
+        - generic "1945 — Почему все в восторге от Черчилля? | ФАЙБ" [ref=e3010] [cursor=pointer]
+        - 'generic "1945 — 1945: Капитуляция Японии / Как закончилась Вторая мировая война / Уроки истории / МИНАЕВ" [ref=e3011] [cursor=pointer]'
+        - generic "1950 — Северная и Южная Корея / Корейская война / Уроки истории / МИНАЕВ" [ref=e3012] [cursor=pointer]
+        - generic "1950 — Коммунизм в Европе" [ref=e3013] [cursor=pointer]
+        - generic "1950 — СССР после войны" [ref=e3014] [cursor=pointer]
+        - generic "1950 — Что случилось с Мэрилин Монро? Биография легендарной актрисы" [ref=e3015] [cursor=pointer]
+        - 'generic "1950 — Северная vs Южная Корея #экономика #история #политика" [ref=e3016] [cursor=pointer]'
+        - 'generic "1950 — Анастас Микоян: Кулинарная революция СССР / Личности / МИНАЕВ" [ref=e3017] [cursor=pointer]'
+        - generic "1951 — Моссад / Самая закрытая спецслужба мира / Уроки истории / МИНАЕВ" [ref=e3018] [cursor=pointer]
+        - 'generic "1951 — Дело Розенбергов: Предатели или жертвы Холодной войны? / Уроки истории @MINAEVLIVE" [ref=e3019] [cursor=pointer]'
+        - generic "1953 — После Сталина / Как делили власть Берия, Маленков и Хрущев / Уроки истории / МИНАЕВ" [ref=e3020] [cursor=pointer]
+        - 'generic "1955 — Альберт Эйнштейн: Гений, изменивший XX век / Личности @MINAEVLIVE" [ref=e3021] [cursor=pointer]'
+        - generic "1956 — Оттепель / Уроки Истории / МИНАЕВ" [ref=e3022] [cursor=pointer]
+        - 'generic "1959 — Куба после революции #экономика #история #образование #санкции #куба #сша" [ref=e3023] [cursor=pointer]'
+        - generic "1959 — Че Гевара / Команданте Кубинской революции / Личности / МИНАЕВ" [ref=e3024] [cursor=pointer]
+        - generic "1959 — ПЕРЕВАЛ ДЯТЛОВА / Что случилось с группой туристов? / Уроки истории / @MINAEVLIVE" [ref=e3025] [cursor=pointer]
+        - generic "1959 — Что случилось с группой Дятлова? Правда и Мифы Перевала" [ref=e3026] [cursor=pointer]
+        - generic "1960 — Самый опасный разведчик КГБ / Уроки истории / МИНАЕВ" [ref=e3027] [cursor=pointer]
+        - 'generic "1960 — Стиль 60-х: Как одевались в СССР в эпоху «оттепели» / ДОЛЕЦКАЯ / @MINAEVLIVE" [ref=e3028] [cursor=pointer]'
+        - generic "1960 — Оппенгеймер против Курчатова. Ядерная гонка века | ФАЙБ" [ref=e3029] [cursor=pointer]
+        - 'generic "1960 — Сальвадор Дали: Как гений сюрреализма превратил искусство в шоу-бизнес / ЛИЧНОСТИ / @MINAEVLIVE" [ref=e3030] [cursor=pointer]'
+        - 'generic "1960 — ЭНДИ УОРХОЛ: Пули над Манхэттеном / Истории кумиров / @MINAEVLIVE" [ref=e3031] [cursor=pointer]'
+        - generic "1960 — История НАТО" [ref=e3032] [cursor=pointer]
+        - generic "1961 — Студенты прорыли Тоннель, чтобы сбежать из страны" [ref=e3033] [cursor=pointer]
+        - generic "1961 — Что скрывал ГАГАРИН? Реальная история Первого человека в Космосе" [ref=e3034] [cursor=pointer]
+        - generic "1961 — Гагарин / Как один полет изменил весь мир / Личности / @MINAEVLIVE" [ref=e3035] [cursor=pointer]
+        - generic "1961 — Шпионы в ГДР" [ref=e3036] [cursor=pointer]
+        - generic "1961 — Как разделили Берлин" [ref=e3037] [cursor=pointer]
+        - generic "1962 — Карибский кризис / Холодная война / Уроки истории / МИНАЕВ" [ref=e3038] [cursor=pointer]
+        - generic "1962 — Самый громкий побег 20го века. Тайна беглецов из Алькатраса" [ref=e3039] [cursor=pointer]
+        - 'generic "1962 — МОСГАЗ: Самый известный маньяк после Чикатило / Серийный номер 19 / МИНАЕВ" [ref=e3040] [cursor=pointer]'
+        - 'generic "1962 — МЭРИЛИН МОНРО: Как Джон Кеннеди связан с убийством актрисы? / Истории кумиров / @MINAEVLIVE" [ref=e3041] [cursor=pointer]'
+        - generic "1962 — Самый ценный Шпион КГБ. Его не могли раскрыть 30 лет" [ref=e3042] [cursor=pointer]
+        - generic "1962 — Гонка вооружений СССР и США / Холодная война / Уроки истории / МИНАЕВ" [ref=e3043] [cursor=pointer]
+        - 'generic "1962 — Холодная война: Как бывшие союзники стали врагами / Уроки истории / МИНАЕВ" [ref=e3044] [cursor=pointer]'
+        - 'generic "1962 — Холодная война в Египте #история #экономика #ссср #сша" [ref=e3045] [cursor=pointer]'
+        - generic "1963 — Кто «убрал» Кеннеди? Расследование тайны века" [ref=e3046] [cursor=pointer]
+        - 'generic "1963 — Кеннеди: выстрелы, изменившие историю | ФАЙБ" [ref=e3047] [cursor=pointer]'
+        - generic "1963 — Тёмная сторона комиксов. Скрытая пропаганда | ФАЙБ" [ref=e3048] [cursor=pointer]
+        - generic "1963 — Убийство Джона Кеннеди / Кто и зачем убил президента США? / Уроки истории / МИНАЕВ" [ref=e3049] [cursor=pointer]
+        - generic "1963 — Его искали 40 лет | История Великого ограбления поезда" [ref=e3050] [cursor=pointer]
+        - generic "1964 — Главный заговор 20 века. Как уничтожили Хрущева | ФАЙБ" [ref=e3051] [cursor=pointer]
+        - generic "1965 — СИНГАПУР. Диктатура, которая вам понравится | ФАЙБ" [ref=e3052] [cursor=pointer]
+        - generic "1965 — Борьба на выживание / Холодная война / Уроки истории / МИНАЕВ" [ref=e3053] [cursor=pointer]
+        - 'generic "1965 — ФРЭНК СИНАТРА: Главный связной итальянской мафии / Истории кумиров / @MINAEVLIVE" [ref=e3054] [cursor=pointer]'
+        - generic "1966 — Самый безумный диктатор. Голод, революция, Китай. Катастрофа Мао Цзэдуна | ФАЙБ" [ref=e3055] [cursor=pointer]
+        - generic "1966 — Побег Агента КГБ, который скрывали 25 лет" [ref=e3056] [cursor=pointer]
+        - generic "1968 — Вьетнамская война / История позора США во Вьетнаме / Уроки истории / МИНАЕВ" [ref=e3057] [cursor=pointer]
+        - generic "1968 — Как американцы похитили Ядерную Подлодку СССР. Самая отчаянная операция ЦРУ" [ref=e3058] [cursor=pointer]
+        - generic "1969 — Подросток совершил невозможный побег" [ref=e3059] [cursor=pointer]
+        - generic "1969 — Он держал в страхе всю Америку | Реальная история \"Зодиака\"" [ref=e3060] [cursor=pointer]
+        - generic "1969 — Ирландская республиканская армия / ИРА / Ирландия против Англии / Уроки истории / МИНАЕВ" [ref=e3061] [cursor=pointer]
+        - 'generic "1970 — Сделка, о которой вы не знали #экономика #история #ссср #германия #газ" [ref=e3062] [cursor=pointer]'
+        - generic "1970 — Владимир Высоцкий / Личности / МИНАЕВ" [ref=e3063] [cursor=pointer]
+        - 'generic "1970 — RAF: Ужас Европы / Фракция Красной армии / Уроки истории / МИНАЕВ" [ref=e3064] [cursor=pointer]'
+        - 'generic "1970 — Гетти: Проклятые деньги самого скупого миллиардера в истории / Истории миллиардов @MINAEVLIVE" [ref=e3065] [cursor=pointer]'
+        - 'generic "1970 — Как в СССР появился газ #экономика #история #газ #газпром" [ref=e3066] [cursor=pointer]'
+        - generic "1971 — Самое загадочное исчезновение | Дело Ди Би Купера" [ref=e3067] [cursor=pointer]
+        - 'generic "1972 — Бобби Фишер: Опасные игры разума и война с ФБР / Истории кумиров / МИНАЕВ" [ref=e3068] [cursor=pointer]'
+        - generic "1974 — Президентский скандал / Почему Ричарду Никсону пришлось уйти в отставку? / Уроки истории / МИНАЕВ" [ref=e3069] [cursor=pointer]
+        - 'generic "1976 — Говард Хьюз: Миллиардер-затворник или безумный гений, изменивший авиацию? / Личности @MINAEVLIVE" [ref=e3070] [cursor=pointer]'
+        - generic "1979 — Самая Успешная Шпионская операция ЦРУ в Москве" [ref=e3071] [cursor=pointer]
+        - 'generic "1980 — Картель Пабло Эскобара: Колумбия, криминал и нарковойны / Уроки истории / @MINAEVLIVE" [ref=e3072] [cursor=pointer]'
+        - generic "1980 — ПАНЕЛЬКИ. Кем нас сделали многоэтажки? | ФАЙБ" [ref=e3073] [cursor=pointer]
+        - 'generic "1980 — Санкции холодной войны #экономика #история #санкции #ссср #сша" [ref=e3074] [cursor=pointer]'
+        - 'generic "1980 — Республика БАМ: История Байкало-Амурской магистрали / Уроки истории / МИНАЕВ" [ref=e3075] [cursor=pointer]'
+        - generic "1980 — Проблемы с машинами в СССР" [ref=e3076] [cursor=pointer]
+        - generic "1980 — Им врали 30 лет. Страшная правда Двойников из Америки" [ref=e3077] [cursor=pointer]
+        - generic "1980 — Афганская война / Почему СССР ввёл войска в Афганистан / Уроки истории / МИНАЕВ" [ref=e3078] [cursor=pointer]
+        - 'generic "1980 — ВИТЕБСКИЙ ДУШИТЕЛЬ: История жуткой подмены / СЕРИЙНЫЙ НОМЕР 5 / @MINAEVLIVE" [ref=e3079] [cursor=pointer]'
+        - generic "1980 — Сексуальная революция в советском кино | ФАЙБ" [ref=e3080] [cursor=pointer]
+        - generic "1980 — Как серийный убийца едва не начал расовую войну в США | ФАЙБ" [ref=e3081] [cursor=pointer]
+        - 'generic "1980 — ГЕЙСИ: Как клоун стал убийцей и почему это сходило с рук / СЕРИЙНЫЙ НОМЕР 12 @MINAEVLIVE" [ref=e3082] [cursor=pointer]'
+        - 'generic "1980 — 1980-2010-е: Олимпиада-80, Большой теннис в России, FIFA-2018 / История Московского спорта / МИНАЕВ" [ref=e3083] [cursor=pointer]'
+        - 'generic "1980 — БАНДИ: Из политика в маньяки / СЕРИЙНЫЙ НОМЕР 4 / @MINAEVLIVE" [ref=e3084] [cursor=pointer]'
+        - generic "1982 — Тэтчер / Гениальный политик или худший премьер-министр Великобритании? / Личности / @MINAEVLIVE" [ref=e3085] [cursor=pointer]
+        - generic "1985 — Британский Агент внутри КГБ. Главная шпионская история 20го века" [ref=e3086] [cursor=pointer]
+        - generic "1985 — Восьмидесятые – лучшее десятилетие 20 века | ФАЙБ" [ref=e3087] [cursor=pointer]
+        - generic "1985 — Заложники в Бейруте / Кто похитил советских дипломатов? / Уроки истории / МИНАЕВ" [ref=e3088] [cursor=pointer]
+        - generic "1985 — Почему ТИТАНИК не могли найти 70 лет?" [ref=e3089] [cursor=pointer]
+        - generic "1985 — Перестройка / Уроки истории / МИНАЕВ" [ref=e3090] [cursor=pointer]
+        - 'generic "1985 — Это Япония в 80-е #экономика #история #япония" [ref=e3091] [cursor=pointer]'
+        - generic "1986 — Тайная операция ЦРУ / Скандал ИРАН-КОНТРАС / Уроки истории / МИНАЕВ" [ref=e3092] [cursor=pointer]
+        - 'generic "1986 — Чернобыль: Трагедия, изменившая мир / Уроки истории @MINAEVLIVE" [ref=e3093] [cursor=pointer]'
+        - 'generic "1987 — ВИКТОР ЦОЙ: Главный рок-идол России / Истории кумиров @MINAEVLIVE" [ref=e3094] [cursor=pointer]'
+        - generic "1987 — Матиас Руст / Полёт над Кремлём / Исторический детектив / МИНАЕВ" [ref=e3095] [cursor=pointer]
+        - 'generic "1989 — БРАТЬЯ МЕНЕНДЕС: Почему этих извергов обожают и могут скоро освободить? / Серийный номер 16 / МИНАЕВ" [ref=e3096] [cursor=pointer]'
+        - generic "1989 — Роль Беларуси в СССР" [ref=e3097] [cursor=pointer]
+        - generic "1989 — Берлинская стена / Разделение на ГДР и ФРГ / Уроки истории / Минаев" [ref=e3098] [cursor=pointer]
+        - generic "1989 — Как США прикрываются войной с картелями / Уроки истории / МИНАЕВ" [ref=e3099] [cursor=pointer]
+        - generic "1989 — Почему Германия до сих пор разделена?" [ref=e3100] [cursor=pointer]
+        - generic "1990 — Настоящий Джеймс Бонд. Невыдуманный агент, о котором вы не знали | ФАЙБ" [ref=e3101] [cursor=pointer]
+        - generic "1990 — Фарца / Бандиты 90-х / Часть 2 / МИНАЕВ" [ref=e3102] [cursor=pointer]
+        - 'generic "1990 — ВАНГА: Проект спецслужб или феномен века? / Личности / МИНАЕВ" [ref=e3103] [cursor=pointer]'
+        - generic "1990 — Фарца / Как зарабатывали фарцовщики в СССР ? / Часть 1 / МИНАЕВ" [ref=e3104] [cursor=pointer]
+        - generic "1990 — Гибель фондовой биржи России" [ref=e3105] [cursor=pointer]
+        - generic "1991 — Зачем США вторглись в Ирак в 1991 году? / Операция «Буря в пустыне» / Уроки истории / МИНАЕВ" [ref=e3106] [cursor=pointer]
+        - generic "1991 — Августовский Путч 1991 / Провал ГКЧП / Уроки истории / МИНАЕВ" [ref=e3107] [cursor=pointer]
+        - generic "1991 — Распад СССР / Союзный договор / Уроки истории @MINAEVLIVE" [ref=e3108] [cursor=pointer]
+        - generic "1992 — Югославия / Распад Югославии / Уроки истории / МИНАЕВ" [ref=e3109] [cursor=pointer]
+        - generic "1992 — Бандитские 90-е. История, которая вас удивит | ФАЙБ" [ref=e3110] [cursor=pointer]
+        - 'generic "1992 — ЧИКАТИЛО: Ошибки и загадки в деле главного маньяка СССР / СЕРИЙНЫЙ НОМЕР 1 / @MINAEVLIVE" [ref=e3111] [cursor=pointer]'
+        - generic "1993 — Конституция при Ленине, Сталине, Брежневе и Ельцине / История Конституции / Уроки Истории /Минаев" [ref=e3112] [cursor=pointer]
+        - generic "1993 — Бойня в Техасе / Сектанты против агентов ФБР / Уроки истории / МИНАЕВ" [ref=e3113] [cursor=pointer]
+        - generic "1993 — Расстрел Белого дома / Путч 1993/ Уроки истории / МИНАЕВ" [ref=e3114] [cursor=pointer]
+        - 'generic "1994 — КУРТ КОБЕЙН: Взлёт и трагедия солиста группы Nirvana / Истории кумиров / МИНАЕВ" [ref=e3115] [cursor=pointer]'
+        - generic "1994 — Великие аферисты / От Графа Калиостро до МММ Сергея Мавроди / Уроки истории / МИНАЕВ" [ref=e3116] [cursor=pointer]
+        - generic "1995 — Девяностые. Самый личный выпуск | ФАЙБ" [ref=e3117] [cursor=pointer]
+        - generic "1995 — Худшая Россия, которую вы забыли. Девяностые" [ref=e3118] [cursor=pointer]
+        - 'generic "1995 — Эпоха Владислава Листьева: Телевидение 90-х, криминал и жестокое убийство @MINAEVLIVE" [ref=e3119] [cursor=pointer]'
+        - generic "1995 — Мумий Тролль. Морская / Девяностые / МИНАЕВ" [ref=e3120] [cursor=pointer]
+        - generic "1996 — Девяностые. Выборы 1996 г. Часть 1 / МИНАЕВ" [ref=e3121] [cursor=pointer]
+        - generic "1996 — Философ-убийца. Почему его не могли поймать 17 лет | ФАЙБ" [ref=e3122] [cursor=pointer]
+        - 'generic "1997 — ДЖАННИ ВЕРСАЧЕ: Самое гламурное убийство / Истории кумиров / МИНАЕВ" [ref=e3123] [cursor=pointer]'
+        - generic "1997 — Принцесса Диана / Королева людских сердец / Личности / МИНАЕВ" [ref=e3124] [cursor=pointer]
+        - 'generic "1998 — Грандиозный скандал 90-х: БИЛЛ КЛИНТОН и МОНИКА ЛЕВИНСКИ / Уроки истории / @MINAEVLIVE" [ref=e3125] [cursor=pointer]'
+        - 'generic "1998 — Дефолт 1998 года #экономика #история #россия" [ref=e3126] [cursor=pointer]'
+        - generic "1999 — Реальные причины распада Югославии | ФАЙБ" [ref=e3127] [cursor=pointer]
+        - generic [ref=e3128]:
+          - generic [ref=e3131]: Войны
+          - generic [ref=e3134]: Политика
+          - generic [ref=e3137]: Общество
+    - button "≡ Список" [ref=e3138] [cursor=pointer]
+    - generic [ref=e3139]:
+      - generic [ref=e3140]: Tweaks
+      - generic [ref=e3141]: Тема оформления
+      - generic [ref=e3142]:
+        - button "Светлая" [ref=e3143] [cursor=pointer]
+        - button "Тёмная" [ref=e3144] [cursor=pointer]
+      - generic [ref=e3145]: Плотность
+      - generic [ref=e3146]:
+        - button "Просторно" [ref=e3147] [cursor=pointer]
+        - button "Компактно" [ref=e3148] [cursor=pointer]
+      - generic [ref=e3149]: Периоды
+      - generic [ref=e3150]:
+        - button "Показать" [ref=e3151] [cursor=pointer]
+        - button "Скрыть" [ref=e3152] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e3158] [cursor=pointer]:
+    - img [ref=e3159]

@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { VideoCard } from "@/entities/video/ui/VideoCard";
 import { SortedListView } from "./SortedListView";
 import {
-  TW, CW, ROWS_COMFORT, ROWS_COMPACT, CH_COMFORT, CH_COMPACT,
+  TW, CW, PX, ROWS_COMFORT, ROWS_COMPACT, CH_COMFORT, CH_COMPACT,
   xOf, DECADES,
 } from "@/shared/config/timeline";
 import { EVENTS } from "@/entities/event/model/events";
@@ -45,7 +45,7 @@ export function TimelineCanvas({
   const rows = density === "comfortable" ? ROWS_COMFORT : ROWS_COMPACT;
   const ch = density === "comfortable" ? CH_COMFORT : CH_COMPACT;
   const thH = density === "comfortable" ? 96 : 72;
-  const canH = rows[2] + ch + 56;
+  const canH = rows[rows.length - 1] + ch + 56;
 
   const showSorted = sortBy !== "year";
 
@@ -73,6 +73,25 @@ export function TimelineCanvas({
   }, [sortBy, activeEventId, videos]);
 
   const activeEvent = activeEventId ? EVENTS.find((e) => e.id === activeEventId) : null;
+
+  const smartRows = useMemo(() => {
+    const yearSorted = [...videos].sort((a, b) => a.year - b.year);
+    const lastYear: number[] = Array(rows.length).fill(-Infinity);
+    const map = new Map<string, number>();
+    for (const v of yearSorted) {
+      let best = -1, bestClr = -Infinity;
+      for (let r = 0; r < rows.length; r++) {
+        const clr = (v.year - lastYear[r]) * PX - CW;
+        if (clr >= 0 && clr > bestClr) { bestClr = clr; best = r; }
+      }
+      if (best === -1) {
+        best = lastYear.indexOf(Math.min(...lastYear));
+      }
+      map.set(v.id, best);
+      lastYear[best] = v.year;
+    }
+    return map;
+  }, [videos, rows]);
 
   return (
     <div
@@ -135,7 +154,7 @@ export function TimelineCanvas({
           {/* Connector lines */}
           {videos.map((v) => {
             const cx = xOf(v.year);
-            const top = rows[v.row] + ch;
+            const top = rows[smartRows.get(v.id) ?? v.row] + ch;
             return (
               <div
                 key={`c${v.id}`}
@@ -209,7 +228,7 @@ export function TimelineCanvas({
                 cardHeight={ch}
                 thumbHeight={thH}
                 x={xOf(v.year)}
-                y={rows[v.row]}
+                y={rows[smartRows.get(v.id) ?? v.row]}
               />
             );
           })}
