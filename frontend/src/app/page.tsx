@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getDb } from "@/shared/lib/db";
 import { auth } from "@/auth";
 import { deriveEvents } from "@/entities/event/model/events";
